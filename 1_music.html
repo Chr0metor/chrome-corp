@@ -3,145 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive for phones -->
-    <meta name="description" content="High-Trust Brand seeks worthy minions. Join Chrome Corp as a Kenku, AI Clone, Janitor, or custom character—apply now for fun benefits!"> <!-- SEO for traffic -->
-    <meta name="keywords" content="join Chrome Corp, minion application, high-trust brand, AI clone, Kenku, futuristic minions, Chrometor"> <!-- More SEO -->
-    <title>Join Chrome Corp as a Minion</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Roboto font -->
+    <meta name="description" content="Chrometor discography: Stream Ghostmaster Instrumental, Schwarzschild, and Stormlife albums—high-trust brand music for futuristic vibes. Join the Chrome Corp empire!"> <!-- SEO for traffic -->
+    <meta name="keywords" content="Chrometor discography, Schwarzschild album, Stormlife tracks, Ghostmaster Instrumental, futuristic music, Chrome Corp brand"> <!-- More SEO to attract searches -->
+    <title>Chrome Corp Discography</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Roboto font for consistency -->
     <style>
         body {
-            background-image: url('assets/background.jpg'); /* Your background image */
-            background-repeat: repeat; /* Repeats without stretching or pixelation */
-            background-size: auto; /* Keeps original size for tiling */
-            font-family: 'Roboto', sans-serif; /* Roboto font for the page */
+            background-image: url('assets/background.jpg'); /* Site-wide background for brand harmony */
+            background-repeat: repeat; /* Repeats without stretching */
+            background-size: auto; /* Keeps original size */
+            font-family: 'Roboto', sans-serif; /* Roboto font */
             margin: 0;
             padding: 20px;
-            color: #fff; /* Default white text for chrome vibe */
+            color: #fff; /* White text for chrome vibe */
             max-width: 1080px; /* Desktop width as intended */
             margin: 0 auto; /* Centers on desktop */
         }
         h1 {
             color: #333; /* Dark gray for title */
-            font-size: 72px; /* Size 72 */
-            font-weight: bold; /* Bold */
-            text-align: center; /* Centered */
-            margin-bottom: 10px;
-        }
-        p.intro {
-            color: #333; /* Dark gray */
-            font-size: 30px; /* Size 30 */
+            font-size: 72px; /* Large title */
+            font-weight: bold;
             text-align: center;
             margin-bottom: 20px;
         }
-        form {
-            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
-            padding: 20px 40px; /* Left/right margins for spacing (no bleed) */
-            border-radius: 10px;
-        }
-        label {
-            display: block;
-            margin-top: 10px;
-            font-style: italic; /* Italics for labels */
-        }
-        input, select, textarea {
-            width: 100%; /* Full width for mobile */
-            padding: 8px;
-            margin-top: 5px;
-        }
-        #custom-section {
-            display: none; /* Hidden by default; JS shows for Custom */
-        }
-        button {
-            display: block; /* For centering */
-            margin: 20px auto 0; /* Centered at bottom */
-            padding: 15px 30px; /* Larger button */
-            background-color: #c0c0c0; /* Silver base */
-            color: #fff;
-            border: none;
-            cursor: pointer;
-            font-size: 24px; /* Larger text */
-            border-radius: 5px;
-            box-shadow: 0 0 10px #c0c0c0; /* Glowing silver effect */
-            transition: box-shadow 0.3s; /* Smooth glow */
-            width: 50%; /* Half the form length */
-        }
-        button:hover {
-            box-shadow: 0 0 20px #fff; /* Enhanced glow on hover */
-        }
-        #great-benefits {
-            position: relative; /* For overlay */
-            width: 400px; /* Matches image width */
+        .embed-container {
+            margin: 20px auto; /* Centered embeds */
+            max-width: 450px; /* Matches embed width for desktop */
             text-align: center;
-            margin: 20px 0 0 0; /* Lower left positioning (margin from top/left) */
         }
-        #great-benefits img {
-            width: 400px; /* Width under 400px */
-            height: auto; /* Native aspect ratio */
-        }
-        #great-benefits .overlay {
-            position: absolute;
-            bottom: 20px; /* Adjusted bottom to avoid overlap */
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #808080; /* Gray rectangle */
-            color: #fff; /* White text */
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 24px;
-            font-weight: bold;
-            width: 400px; /* Matches image width exactly */
+        iframe {
+            width: 100%; /* Responsive scaling */
+            height: auto; /* Maintain aspect */
         }
         footer {
             text-align: center;
-            margin-top: 20px;
+            margin-top: 40px;
         }
         footer a {
             margin: 0 10px;
-            color: #fff; /* Default white */
+            color: #fff;
             text-decoration: none;
-            font-size: 42px; /* Size 42 */
+            font-size: 42px;
             display: inline-block;
-            background-color: #808080; /* Gray background */
-            border-radius: 50%; /* Squircles */
-            width: 60px; /* Square size */
+            background-color: #808080;
+            border-radius: 50%;
+            width: 60px;
             height: 60px;
-            line-height: 60px; /* Center text */
+            line-height: 60px;
         }
-        footer a.x { color: #000; } /* Black for X */
-        footer a.y { color: #ff0000; } /* Red for Y */
-        footer a.s { color: #ffa500; } /* Orange for S */
-        footer a.b { color: #0000ff; } /* Blue for B */
-        /* Media query for phones: Adjust for screens under 768px */
+        footer a.x { color: #000; }
+        footer a.y { color: #ff0000; }
+        footer a.s { color: #ffa500; }
+        footer a.b { color: #0000ff; }
+        /* Media query for phones */
         @media (max-width: 767px) {
             body {
-                padding: 10px; /* Less padding on mobile */
-                max-width: 100%; /* Full width on phones */
-            }
-            form {
-                padding: 10px 20px; /* Adjusted margins on mobile */
+                padding: 10px;
+                max-width: 100%;
             }
             h1 {
-                font-size: 48px; /* Smaller title on mobile */
+                font-size: 48px;
             }
-            p.intro {
-                font-size: 20px; /* Smaller intro on mobile */
-            }
-            button {
-                width: 100%; /* Full width on mobile for easy taps */
-            }
-            #great-benefits {
-                width: 100%; /* Full width on mobile for lower left feel */
-                margin: 20px 0 0 0; /* Adjusted positioning on mobile */
-            }
-            #great-benefits img {
-                width: 100%; /* Full width on mobile */
-                height: auto; /* Maintain aspect ratio on mobile */
-            }
-            #great-benefits .overlay {
-                width: 100%; /* Full width on mobile */
-                font-size: 18px; /* Smaller text on mobile */
+            .embed-container {
+                max-width: 100%;
             }
             footer a {
-                font-size: 28px; /* Smaller footer on mobile */
+                font-size: 28px;
                 width: 40px;
                 height: 40px;
                 line-height: 40px;
@@ -151,65 +78,21 @@
 </head>
 <body>
 
-    <!-- Logo centered above form, resized and linked to index -->
-    <a href="index.html">
-        <img src="assets/logo.png" alt="Chrome Corp Logo" style="display: block; margin: 0 auto 20px; width: 450px; height: 450px;">
-    </a>
+    <h1>Discography</h1>
 
-    <h1>JOIN CHROME CORP.!</h1>
+    <!-- Ghostmaster at top -->
+    <div class="embed-container">
+        <iframe style="border: 0; width: 450px; height: 542px;" src="https://bandcamp.com/EmbeddedPlayer/track=3031425076/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/" seamless><a href="https://chrometor.bandcamp.com/track/ghostmaster-instrumental">Ghostmaster (Instrumental) by Chrometor</a></iframe>
+    </div>
 
-    <p class="intro">Fill out below: send your application to the CEO!</p>
+    <!-- Schwarzschild below -->
+    <div class="embed-container">
+        <iframe style="border: 0; width: 450px; height: 570px;" src="https://bandcamp.com/EmbeddedPlayer/album=3635959747/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/transparent=true/" seamless><a href="https://chrometor.bandcamp.com/album/schwarzschild">Schwarzschild by Chrometor</a></iframe>
+    </div>
 
-    <form action="https://formspree.io/f/meolpryn" method="POST">
-        <label>Minion Name:</label>
-        <input type="text" name="minion_name" required>
-
-        <label>Minion Type:</label>
-        <select name="minion_type" id="minion_type">
-            <option>Select...</option>
-            <option>Kenku</option>
-            <option>AI Clone</option>
-            <option>Janitor</option>
-            <option>Custom</option>
-        </select>
-
-        <div id="custom-section">
-            <label>Describe your custom supportive character:</label>
-            <textarea name="custom_description"></textarea>
-        </div>
-
-        <label>Email to receive minion-only newsletter:</label>
-        <input type="email" name="email" required>
-
-        <label>Most Useful Skill:</label>
-        <input type="text" name="useful_skill">
-
-        <label>Least Useful Skill:</label>
-        <input type="text" name="least_useful_skill">
-
-        <label>Why Join?</label>
-        <textarea name="why_join"></textarea>
-
-        <label>Favorite Vibe:</label>
-        <input type="text" name="favorite_vibe">
-
-        <label>Favorite Snack:</label>
-        <input type="text" name="favorite_snack">
-
-        <label>Preferred Reward:</label>
-        <input type="text" name="preferred_reward">
-
-        <input type="hidden" name="_subject" value="New Chrome Corp Minion Application!">
-
-        <!-- Honeypot for spam protection -->
-        <input type="text" name="_gotcha" style="display:none;">
-
-        <button type="submit">Apply Now!</button>
-    </form>
-
-    <div id="great-benefits">
-        <img src="adverts/minion.JPG" alt="Chrome Corp Minion Benefits Image">
-        <div class="overlay">Great Benefits!</div>
+    <!-- Stormlife below -->
+    <div class="embed-container">
+        <iframe style="border: 0; width: 450px; height: 570px;" src="https://bandcamp.com/EmbeddedPlayer/album=1241405906/size=large/bgcol=333333/linkcol=4ec5ec/tracklist=false/transparent=true/" seamless><a href="https://chrometor.bandcamp.com/album/stormlife">Stormlife by Chrometor</a></iframe>
     </div>
 
     <footer>
@@ -218,38 +101,6 @@
         <a href="https://spotify.com" class="s">S</a>
         <a href="https://bandcamp.com" class="b">B</a>
     </footer>
-
-    <script>
-        // JS to show/hide custom description based on minion type
-        document.getElementById('minion_type').addEventListener('change', function() {
-            var customSection = document.getElementById('custom-section');
-            if (this.value === 'Custom') {
-                customSection.style.display = 'block';
-            } else {
-                customSection.style.display = 'none';
-            }
-        });
-
-        // JS/AJAX for on-page submission (no redirect, advanced brand control)
-        const form = document.querySelector('form');
-        form.addEventListener('submit', function(e) {
-            e.preventDefault(); // Stop default submit
-            const formData = new FormData(form);
-            fetch(form.action, {
-                method: 'POST',
-                body: formData,
-                headers: { 'Accept': 'application/json' }
-            }).then(response => {
-                if (response.ok) {
-                    form.innerHTML = '<h2>The Boss will read your application.</h2><p>Head back to <a href="index.html">home</a> or explore <a href="1_poetry.html">poetry</a>.</p>'; // Branded success message
-                } else {
-                    alert('Oopsy-daisy! Good thing nobody got hurt! Try again!?');
-                }
-            }).catch(error => {
-                alert('Oopsy-daisy! Good thing nobody got hurt! Try again!?');
-            });
-        });
-    </script>
 
 </body>
 </html>
