@@ -2,161 +2,103 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive for phones -->
-    <meta name="description" content="Chrometor discography: Stream Ghostmaster Instrumental, Schwarzschild, and Stormlife albums—high-trust brand music for futuristic vibes. Join the Chrome Corp empire!"> <!-- SEO for traffic -->
-    <meta name="keywords" content="Chrometor discography, Schwarzschild album, Stormlife tracks, Ghostmaster Instrumental, futuristic music, Chrome Corp brand"> <!-- More SEO to attract searches -->
-    <title>Chrome Corp Discography</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Roboto font for consistency -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chrome Corp Discography: Discover futuristic tracks by Chrometor including Ghostmaster (Instrumental), Schwarzschild, and Stormlife on Bandcamp. Join the sleek, resilient, efficient high-trust brand minions vibe with music that inspires!">
+    <meta name="keywords" content="Chrome Corp, high-trust brand minions, futuristic vibe, sleek resilient efficient, Chrometor discography, Ghostmaster instrumental, Schwarzschild, Stormlife, Bandcamp music tracks">
+    <link rel="icon" href="assets/favicon.ico">
+    <title>Discography - Chrome Corp.</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+        html { height: 100%; }
         body {
-            background-image: url('assets/background.jpg'); /* Site-wide background for brand harmony */
-            background-repeat: repeat; /* Repeats without stretching */
-            background-size: auto; /* Keeps original size */
-            font-family: 'Roboto', sans-serif; /* Roboto font */
-            margin: 0;
-            padding: 20px;
-            color: #fff; /* White text for chrome vibe */
-            max-width: 1080px; /* Desktop width as intended */
-            margin: 0 auto; /* Centers on desktop */
-            position: relative; /* For absolute advert positioning */
-        }
-        /* Logo and title styling matched from minion page */
-        .logo-container {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .logo-container img {
-            width: 450px;
-            height: 450px;
-        }
-        h1 {
-            color: #333; /* Dark gray for title */
-            font-size: 72px; /* Size 72 */
-            font-weight: bold;
-            text-align: center;
-            margin: 0;
-        }
-        .embed-container {
-            margin: 20px auto; /* Centered embeds */
-            max-width: 450px; /* Matches embed width for desktop */
-            text-align: center;
-        }
-        iframe {
-            width: 100%; /* Responsive scaling */
-            height: auto; /* Maintain aspect */
-        }
-        /* Advert on lower left side */
-        .advert {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            width: 200px; /* Adjust size as needed for fit */
-            text-align: center;
-        }
-        .advert img {
-            width: 100%;
-        }
-        .advert .overlay {
-            position: absolute;
-            bottom: 10px;
-            left: 0;
-            width: 100%;
-            background-color: rgba(128, 128, 128, 0.8); /* Gray overlay */
+            font-family: 'Roboto', sans-serif;
+            background: url('assets/background.jpg') repeat center center / auto;
             color: #fff;
-            padding: 5px;
-            font-size: 14px;
+            margin: 0 auto;
+            padding: 0 0 100px 0; /* Added padding-bottom to body to create space for footer and prevent overlap */
+            font-weight: 300;
+            font-style: italic;
+            min-height: 1920px;
+            max-width: 1080px;
+            position: relative;
         }
-        footer {
-            text-align: center;
-            margin-top: 40px;
-        }
-        footer a {
-            margin: 0 10px;
-            color: #fff;
-            text-decoration: none;
-            font-size: 42px;
-            display: inline-block;
-            background-color: #808080;
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            line-height: 60px;
-        }
-        footer a.x { color: #000; }
-        footer a.y { color: #ff0000; }
-        footer a.s { color: #ffa500; }
-        footer a.b { color: #0000ff; }
-        /* Media query for phones */
+        #logo-overlay { display: block; margin: 20px auto; width: 450px; height: 450px; cursor: pointer; }
+        h1 { font-weight: 700; font-style: normal; color: #333; text-transform: uppercase; font-size: 72px; margin: 0; text-align: center; }
+        #content { padding: 20px; text-align: center; }
+        .track { margin-bottom: 40px; }
+        .track iframe { width: 100%; max-width: 450px; height: auto; display: block; margin: 0 auto; border: none; min-height: 542px; }
+        #ad-container { position: fixed; left: 0; bottom: 20px; width: 200px; height: 350px; overflow: hidden; cursor: pointer; border: 2px dashed gold; }
+        #ad-container img { width: 100%; height: 100%; object-fit: cover; }
+        #ad-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; text-align: center; padding: 10px; box-sizing: border-box; font-size: 16px; font-weight: bold; pointer-events: none; }
+        #ad-overlay.bottom { align-items: flex-end; }
+        #social-footer { position: absolute; bottom: 40px; left: 0; right: 0; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; } /* Increased bottom to 40px for more downward positioning */
+        #social-footer a { text-decoration: none; background: #333; padding: 10px; border-radius: 5px; display: flex; align-items: center; justify-content: center; transition: box-shadow 0.3s; font-size: 42px; font-weight: bold; width: 60px; height: 60px; }
+        #social-footer a:hover { box-shadow: 0 0 15px #c0c0c0; }
+        .logo-x { color: #000; }
+        .logo-youtube { color: #f00; }
+        .logo-soundcloud { color: #f50; }
+        .logo-bandcamp { color: #00f; }
         @media (max-width: 767px) {
-            body {
-                padding: 10px;
-                max-width: 100%;
-            }
-            .logo-container img {
-                width: 300px; /* Smaller logo on mobile */
-                height: 300px;
-            }
-            h1 {
-                font-size: 48px;
-            }
-            .embed-container {
-                max-width: 100%;
-            }
-            .advert {
-                position: static; /* Stack advert on mobile to avoid overlap */
-                margin: 20px auto;
-                width: 100%;
-            }
-            footer a {
-                font-size: 28px;
-                width: 40px;
-                height: 40px;
-                line-height: 40px;
-            }
+            #logo-overlay { width: 100%; height: auto; max-width: 450px; }
+            h1 { font-size: 48px; }
+            .track iframe { max-width: 100%; min-height: 300px; }
+            #ad-container { width: 150px; height: 262.5px; }
+            body { padding-bottom: 150px; } /* Increased mobile padding-bottom for better spacing */
+            #social-footer { bottom: 60px; } /* Further adjustment for mobile */
         }
     </style>
 </head>
 <body>
-
-    <!-- Logo centered at top, matching style, linked to index -->
-    <div class="logo-container">
-        <a href="index.html">
-            <img src="assets/logo.png" alt="Chrome Corp Logo">
-        </a>
-    </div>
-
-    <!-- Title underneath logo, matching style -->
+    <img id="logo-overlay" src="assets/logo.png" alt="Chrome Corp Logo" onclick="window.location.href='index.html';">
     <h1>Discography</h1>
-
-    <!-- Ghostmaster at top -->
-    <div class="embed-container">
-        <iframe style="border: 0; width: 450px; height: 542px;" src="https://bandcamp.com/EmbeddedPlayer/track=3031425076/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/" seamless><a href="https://chrometor.bandcamp.com/track/ghostmaster-instrumental">Ghostmaster (Instrumental) by Chrometor</a></iframe>
+    <div id="content">
+        <div class="track">
+            <iframe style="border: 0; width: 450px; height: 542px;" src="https://bandcamp.com/EmbeddedPlayer/track=3031425076/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/" seamless><a href="https://chrometor.bandcamp.com/track/ghostmaster-instrumental">Ghostmaster (Instrumental) by Chrometor</a></iframe>
+        </div>
+        <div class="track">
+            <iframe style="border: 0; width: 450px; height: 570px;" src="https://bandcamp.com/EmbeddedPlayer/album=3635959747/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/transparent=true/" seamless><a href="https://chrometor.bandcamp.com/album/schwarzschild">Schwarzschild by Chrometor</a></iframe>
+        </div>
+        <div class="track">
+            <iframe style="border: 0; width: 450px; height: 570px;" src="https://bandcamp.com/EmbeddedPlayer/album=1241405906/size=large/bgcol=333333/linkcol=4ec5ec/tracklist=false/transparent=true/" seamless><a href="https://chrometor.bandcamp.com/album/stormlife">Stormlife by Chrometor</a></iframe>
+        </div>
     </div>
-
-    <!-- Schwarzschild below -->
-    <div class="embed-container">
-        <iframe style="border: 0; width: 450px; height: 570px;" src="https://bandcamp.com/EmbeddedPlayer/album=3635959747/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/transparent=true/" seamless><a href="https://chrometor.bandcamp.com/album/schwarzschild">Schwarzschild by Chrometor</a></iframe>
+   
+    <!-- Ad Container -->
+    <div id="ad-container">
+        <img id="ad-image" src="" alt="Ad">
+        <div id="ad-overlay"></div>
     </div>
-
-    <!-- Stormlife below -->
-    <div class="embed-container">
-        <iframe style="border: 0; width: 450px; height: 570px;" src="https://bandcamp.com/EmbeddedPlayer/album=1241405906/size=large/bgcol=333333/linkcol=4ec5ec/tracklist=false/transparent=true/" seamless><a href="https://chrometor.bandcamp.com/album/stormlife">Stormlife by Chrometor</a></iframe>
+   
+    <div id="social-footer">
+        <a href="https://x.com/Chr0metor" target="_blank" class="logo-x">X</a>
+        <a href="https://www.youtube.com/@chrometor" target="_blank" class="logo-youtube">Y</a>
+        <a href="https://soundcloud.com/chrometor" target="_blank" class="logo-soundcloud">S</a>
+        <a href="https://chrometor.bandcamp.com/" target="_blank" class="logo-bandcamp">B</a>
     </div>
-
-    <!-- Advert on lower left side, with overlay -->
-    <div class="advert">
-        <a href="1_merch.html">
-            <img src="adverts/garage-rizz.gif" alt="Chrome Corp Advert">
-            <div class="overlay">Does your Masterplan need a Master-makeover?</div>
-        </a>
-    </div>
-
-    <footer>
-        <a href="https://x.com" class="x">X</a>
-        <a href="https://youtube.com" class="y">Y</a>
-        <a href="https://spotify.com" class="s">S</a>
-        <a href="https://bandcamp.com" class="b">B</a>
-    </footer>
-
+   
+    <script>
+        const ads = [
+            { file: 'adverts/already-under-my-genjutsu-2.gif', text: 'Free Disillusionment available.', color: '#808080', position: '', link: '1_merch.html' },
+            { file: 'adverts/dangerous-twerk.gif', text: 'GET BIG! ORDER NOW!', color: '#808080', position: '', link: '1_merch.html' },
+            { file: 'adverts/garage-rizz.gif', text: 'Does your Masterplan need a Master-makeover?', color: '#ff4500', position: '', link: '1_merch.html' },
+            { file: 'adverts/heart-giver.gif', text: '', color: '', position: '', link: '1_game.html' },
+            { file: 'adverts/minion.JPG', text: 'Join Today!', color: '#c0c0c0', position: 'bottom', link: '1_minion_application.html' },
+            { file: 'adverts/laugh-loop.gif', text: 'Cure DEPRESSION!', color: '#fff', position: '', link: '1_merch.html' },
+            { file: 'adverts/obelisk-merry-christmas.gif', text: 'Are you FORGETTING something?', color: '#fff', position: '', link: '1_merch.html' },
+            { file: 'adverts/rose-delivery.gif', text: 'Mysterious Singles in your area.', color: '#f00', position: '', link: '1_merch.html' }
+        ];
+        let cycle = localStorage.getItem('adCycle') ? parseInt(localStorage.getItem('adCycle')) : 0;
+        cycle = (cycle + 1) % 8;
+        localStorage.setItem('adCycle', cycle);
+        const ad = ads[cycle];
+        const adContainer = document.getElementById('ad-container');
+        const adImage = document.getElementById('ad-image');
+        adImage.src = ad.file;
+        const overlay = document.getElementById('ad-overlay');
+        overlay.innerText = ad.text;
+        overlay.style.color = ad.color;
+        if (ad.position === 'bottom') overlay.classList.add('bottom');
+        adContainer.onclick = () => window.location.href = ad.link;
+    </script>
 </body>
 </html>
