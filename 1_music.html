@@ -18,13 +18,23 @@
             color: #fff; /* White text for chrome vibe */
             max-width: 1080px; /* Desktop width as intended */
             margin: 0 auto; /* Centers on desktop */
+            position: relative; /* For absolute advert positioning */
+        }
+        /* Logo and title styling matched from minion page */
+        .logo-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo-container img {
+            width: 450px;
+            height: 450px;
         }
         h1 {
             color: #333; /* Dark gray for title */
-            font-size: 72px; /* Large title */
+            font-size: 72px; /* Size 72 */
             font-weight: bold;
             text-align: center;
-            margin-bottom: 20px;
+            margin: 0;
         }
         .embed-container {
             margin: 20px auto; /* Centered embeds */
@@ -34,6 +44,27 @@
         iframe {
             width: 100%; /* Responsive scaling */
             height: auto; /* Maintain aspect */
+        }
+        /* Advert on lower left side */
+        .advert {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            width: 200px; /* Adjust size as needed for fit */
+            text-align: center;
+        }
+        .advert img {
+            width: 100%;
+        }
+        .advert .overlay {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            width: 100%;
+            background-color: rgba(128, 128, 128, 0.8); /* Gray overlay */
+            color: #fff;
+            padding: 5px;
+            font-size: 14px;
         }
         footer {
             text-align: center;
@@ -61,11 +92,20 @@
                 padding: 10px;
                 max-width: 100%;
             }
+            .logo-container img {
+                width: 300px; /* Smaller logo on mobile */
+                height: 300px;
+            }
             h1 {
                 font-size: 48px;
             }
             .embed-container {
                 max-width: 100%;
+            }
+            .advert {
+                position: static; /* Stack advert on mobile to avoid overlap */
+                margin: 20px auto;
+                width: 100%;
             }
             footer a {
                 font-size: 28px;
@@ -78,6 +118,14 @@
 </head>
 <body>
 
+    <!-- Logo centered at top, matching style, linked to index -->
+    <div class="logo-container">
+        <a href="index.html">
+            <img src="assets/logo.png" alt="Chrome Corp Logo">
+        </a>
+    </div>
+
+    <!-- Title underneath logo, matching style -->
     <h1>Discography</h1>
 
     <!-- Ghostmaster at top -->
@@ -93,6 +141,14 @@
     <!-- Stormlife below -->
     <div class="embed-container">
         <iframe style="border: 0; width: 450px; height: 570px;" src="https://bandcamp.com/EmbeddedPlayer/album=1241405906/size=large/bgcol=333333/linkcol=4ec5ec/tracklist=false/transparent=true/" seamless><a href="https://chrometor.bandcamp.com/album/stormlife">Stormlife by Chrometor</a></iframe>
+    </div>
+
+    <!-- Advert on lower left side, with overlay -->
+    <div class="advert">
+        <a href="1_merch.html">
+            <img src="adverts/garage-rizz.gif" alt="Chrome Corp Advert">
+            <div class="overlay">Does your Masterplan need a Master-makeover?</div>
+        </a>
     </div>
 
     <footer>
