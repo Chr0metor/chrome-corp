@@ -30,3 +30,37 @@ All pages: Responsive (viewport/media queries), SEO metas/keywords (e.g., 'high-
 ## Setup & Deployment
 
 1. **Clone the Repo**:
+
+2. **Add Assets**: Place images/videos in `assets/` (lowercase, e.g., logo.png, background.jpg), ads in `adverts/` (gifs/jpgs).
+
+3. **Edit & Test Locally**: Open HTML files in a browser. Use VS Code or GitHub Desktop for changes.
+
+4. **Deploy to GitHub Pages**:
+- Push to main branch: `git add . && git commit -m "Update for traffic boost" && git push`.
+- In repo settings > Pages, set source to main branch/root—site deploys at https://[your-username].github.io/chrome-corp/ (or custom domain like chrometor.net via DNS).
+
+No build step needed—pure HTML/CSS/JS for resilience.
+
+## Usage
+
+- Navigate: Start at index.html for pyramid links.
+- Customize: Update HTML for new lore/merch; add JS for game enhancements.
+- Track Traffic: Use GitHub Insights (repo > Insights > Traffic) or integrate Google Analytics script in <head> for deeper metrics (sessions, sources).
+- Security: Minion form has honeypot/required fields; monitor submissions via Formspree.
+
+Promote on X/SoundCloud/Bandcamp to drive traffic—tease duality lore for shares!
+
+## Contributing
+
+Minions welcome! Fork, add features (e.g., blog page), submit PRs. Follow rules: Consistent styling (Roboto, #333 titles), no ads on specified pages, boost traffic/brand in commits.
+
+## License
+
+MIT License—feel free to fork and adapt for your chrome dreams.
+
+## Contact
+
+- CEO: @Chr0metor on X
+- Built with help from Grok (xAI minion)—slung code for this sleek site!
+
+Join the duality—become a minion today!
