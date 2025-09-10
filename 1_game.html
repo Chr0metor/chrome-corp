@@ -2,112 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Chrome Corp Game: As Chrometor, navigate the shadows of duality in a mysterious realm of balance and chrome souls. Embrace the sleek, resilient, efficient high-trust brand minions lore—where every choice echoes in the void of eternity!">
     <meta name="keywords" content="Chrome Corp, high-trust brand minions, futuristic vibe, sleek resilient efficient, Chrometor game, navigating duality, chrome souls balance, mysterious lore adventure">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chrome Corp - Secret Game</title>
     <link rel="icon" href="assets/favicon.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Game - Chrome Corp</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
     <style>
-        body { 
-            margin: 0; 
-            background-image: url('assets/merch/chrome-corp-poster.jpg'); 
-            background-repeat: repeat; 
-            font-family: 'Roboto', sans-serif; 
-            text-align: center; 
-            display: flex; 
-            flex-direction: column; 
-            align-items: center; 
-            height: 100vh; 
+        body {
+            margin: 0;
+            background-image: url('assets/merch/chrome-corp-poster.jpg');
+            background-repeat: repeat;
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            color: #fff;
+            font-weight: 300;
+            font-style: italic;
+            overflow: hidden; /* Prevent accidental scrolling */
+            padding-bottom: 100px; /* Space for elements */
         }
-        #logo { 
-            margin: 10px 0; 
+        #logo-overlay { display: block; margin: 10px auto 0 auto; width: 450px; height: 450px; cursor: pointer; } /* Reduced bottom margin for tighter indent */
+        #narrative { color: #FFFFFF; font-weight: bold; margin: 5px 0; max-width: 980px; } /* Tighter spacing */
+        #gameCanvas { max-width: 100%; height: auto; margin-top: 5px; } /* Indented below logo with minimal gap */
+        #win-button { display: none; margin: 10px 0; padding: 10px 20px; background: #333; color: #fff; font-size: 24px; border: none; border-radius: 5px; cursor: pointer; transition: all 0.3s; }
+        #win-button:hover { background: #c0c0c0; box-shadow: 0 0 15px #c0c0c0; color: #000; }
+        .store-link img { max-width: 300px; height: auto; display: block; margin: 10px auto; } /* Resized for fit, tighter margin */
+        @media (max-width: 767px) {
+            body { font-size: 16px; padding-bottom: 150px; }
+            #logo-overlay { width: 100%; height: auto; }
+            #narrative { font-size: 14px; max-width: 90%; }
+            #win-button { font-size: 20px; padding: 8px 16px; }
+            .store-link img { max-width: 100%; }
+            #gameCanvas { width: 100%; height: auto; }
         }
-        #instructions { 
-            color: #FFFFFF; 
-            font-style: italic; 
-            margin: 10px 0; 
-            max-width: 980px; 
-        }
-        #narrative { 
-            color: #FFFFFF; 
-            font-weight: bold; 
-            margin: 10px 0; 
-            max-width: 980px; 
-        }
-        #win-button { 
-            display: none; 
-            margin: 20px 0; 
-            padding: 10px 20px; 
-            background-color: #C0C0C0; 
-            color: #333; 
-            font-size: 24px; 
-            border: none; 
-            border-radius: 5px; 
-            cursor: pointer; 
-        }
-        .advert { 
-            position: fixed; 
-            bottom: 20px; 
-            right: 20px; 
-            z-index: 10; 
-            width: 200px; 
-            height: 350px; 
-            display: flex; 
-            flex-direction: column; 
-            justify-content: flex-end; 
-            text-decoration: none; 
-            border-radius: 10px; 
-            overflow: hidden; 
-            background-color: #808080; 
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); 
-            transition: box-shadow 0.3s ease; 
-        }
-        .advert:hover { box-shadow: 0 0 20px rgba(255, 255, 255, 1); }
-        .advert-img { 
-            width: 100%; 
-            height: 100%; 
-            object-fit: contain; 
-            position: absolute; 
-            top: 0; 
-            left: 0; 
-        }
-        .advert-text { 
-            position: relative; 
-            z-index: 1; 
-            background-color: rgba(0, 0, 0, 0.7); 
-            color: white; 
-            padding: 5px; 
-            text-align: center; 
-            font-style: normal; 
-            font-weight: bold; 
-        }
+        <!-- Ah, Captain Ahab's harpoon streamlines the game with saintlike simplicity and sex-goddess grace—header axed, canvas indented, socials gone for traffic's pure, resilient chase! -->
     </style>
 </head>
 <body>
-    <a href="index.html" id="logo">
-        <img src="assets/logo.png" alt="Chrome Corp Logo" style="width: 200px; height: auto; margin-bottom: 10px;">
-    </a>
-    <div id="title"></div>
-    <canvas id="gameCanvas" width="980" height="735"></canvas>
+    <img id="logo-overlay" src="assets/logo.png" alt="Chrome Corp Logo" onclick="window.location.href='index.html';">
     <div id="narrative">You are Chrometor, navigating duality... Balance: 0%</div>
+    <canvas id="gameCanvas" width="980" height="735"></canvas>
     <button id="win-button" onclick="window.location.href = '2_memo.html';">Go to CEO Memo Pad</button>
-
     <a href="1_merch.html" class="store-link">
-        <img src="assets/Chrome Captured with texture.png" alt="Chrome Captured" style="width: 300px; height: 400px;">
+        <img src="assets/Chrome Captured with texture.png" alt="Chrome Captured">
     </a>
-
-    <footer>
-        <a href="https://x.com/Chr0metor" style="color: #000;">X</a>
-        <a href="https://www.youtube.com/@chrometor" style="color: #FF0000;">Y</a>
-        <a href="https://soundcloud.com/chrometor" style="color: #FFA500;">S</a>
-        <a href="https://chrometor.bandcamp.com/" style="color: #0000FF;">B</a>
-    </footer>
-
     <script>
         const canvas = document.getElementById('gameCanvas');
         const ctx = canvas.getContext('2d');
-
         // Load sprites from assets/game
         const blobImg = new Image();
         blobImg.src = 'assets/game/blob.png'; // 50x50 for shadows
@@ -121,7 +66,6 @@
         plantImg.src = 'assets/game/monstera.png'; // 40x40 for office plant
         const backgroundImg = new Image();
         backgroundImg.src = 'assets/game/floor-plan-game.jpg'; // 980x735 for game background
-
         let assetsLoaded = 0;
         const totalAssets = 6; // Number of sprites including background
         function assetLoaded() {
@@ -129,7 +73,6 @@
             if (assetsLoaded === totalAssets) gameLoop();
         }
         [blobImg, playerImg, moneyImg, crowImg, plantImg, backgroundImg].forEach(img => img.onload = assetLoaded);
-
         const player = { x: 50, y: 50, width: 25, height: 25, speed: 3, balance: 0 };
         const relics = [];
         for (let i = 0; i < 8; i++) {
@@ -144,7 +87,7 @@
         for (let i = 0; i < 6; i++) {
             shadows.push({ x: Math.random() * 880 + 50, y: Math.random() * 685 + 25, width: 50, height: 50, dx: (Math.random() - 0.5) * 4 });
         }
-        for (let i = 0; i < 5; i++) { // Added 5 vertically moving blobs
+        for (let i = 0; i < 5; i++) {
             shadows.push({ x: Math.random() * 880 + 50, y: Math.random() * 685 + 25, width: 50, height: 50, dy: (Math.random() - 0.5) * 4 });
         }
         const money = [];
@@ -173,12 +116,10 @@
         let message = '';
         let hearts = []; // For "CAW!" pop-ups
         let hpPops = []; // For "-1HP" pop-ups
-
-        // Keyboard controls
+        // Keyboard controls (added WASD alt)
         const keys = {};
-        document.addEventListener('keydown', (e) => keys[e.key] = true);
-        document.addEventListener('keyup', (e) => keys[e.key] = false);
-
+        document.addEventListener('keydown', (e) => keys[e.key.toUpperCase()] = true);
+        document.addEventListener('keyup', (e) => keys[e.key.toUpperCase()] = false);
         // Touch controls for mobile
         canvas.addEventListener('touchstart', handleTouch);
         canvas.addEventListener('touchmove', handleTouch);
@@ -189,26 +130,21 @@
             player.x = touch.clientX - rect.left - player.width / 2;
             player.y = touch.clientY - rect.top - player.height / 2;
         }
-
         function collides(a, b) {
             return a.x < b.x + b.width && a.x + a.width > b.x && a.y < b.y + b.height && a.y + a.height > b.y;
         }
-
         function update() {
             if (gameOver) {
                 document.getElementById('win-button').style.display = 'block';
                 return;
             }
-
             const oldX = player.x;
             const oldY = player.y;
-
-            // Player movement
-            if (keys['ArrowUp']) player.y -= player.speed;
-            if (keys['ArrowDown']) player.y += player.speed;
-            if (keys['ArrowLeft']) player.x -= player.speed;
-            if (keys['ArrowRight']) player.x += player.speed;
-
+            // Player movement (WASD or Arrows)
+            if (keys['W'] || keys['ARROWUP']) player.y -= player.speed;
+            if (keys['S'] || keys['ARROWDOWN']) player.y += player.speed;
+            if (keys['A'] || keys['ARROWLEFT']) player.x -= player.speed;
+            if (keys['D'] || keys['ARROWRIGHT']) player.x += player.speed;
             // Wall collisions
             walls.forEach(wall => {
                 if (collides(player, wall)) {
@@ -216,17 +152,25 @@
                     player.y = oldY;
                 }
             });
-
-            // Shadow collisions
+            // Shadow collisions (reduced hitbox by 5px all sides)
             shadows.forEach(shadow => {
-                shadow.x += shadow.dx;
-                if (shadow.x < 0 || shadow.x > canvas.width) shadow.dx = -shadow.dx;
-                if (collides(player, shadow)) {
+                // Horizontal movement
+                if (shadow.dx) {
+                    shadow.x += shadow.dx;
+                    if (shadow.x < 0 || shadow.x > canvas.width) shadow.dx = -shadow.dx;
+                }
+                // Vertical movement
+                if (shadow.dy) {
+                    shadow.y += shadow.dy;
+                    if (shadow.y < 0 || shadow.y > canvas.height) shadow.dy = -shadow.dy;
+                }
+                // Reduced hitbox check
+                const reducedShadow = { x: shadow.x + 5, y: shadow.y + 5, width: shadow.width - 10, height: shadow.height - 10 };
+                if (collides(player, reducedShadow)) {
                     gameOver = true;
                     message = 'Shadow Emotion Consumed you. Game over.';
                 }
             });
-
             // Relic collection
             relics.forEach((relic, i) => {
                 if (Math.hypot(player.x - relic.x, player.y - relic.y) < player.width / 2 + relic.radius) {
@@ -235,7 +179,6 @@
                     document.getElementById('narrative').textContent = `Balance: ${player.balance}% - The mask and self align...`;
                 }
             });
-
             // Minion friendship
             minions.forEach((minion, i) => {
                 if (!minion.befriended && collides(player, minion)) {
@@ -243,7 +186,6 @@
                     hearts.push({ x: minion.x, y: minion.y - 20, timer: 60 });
                 }
             });
-
             // Money "enemy"
             money.forEach((m, i) => {
                 if (collides(player, m)) {
@@ -251,34 +193,27 @@
                     hpPops.push({ x: player.x, y: player.y - 20, timer: 60 });
                 }
             });
-
             // Greed lose condition
             if (money.length === 0) {
                 gameOver = true;
                 message = 'Greed consumes you! Game over.';
             }
-
             // Office win check
             if (collides(player, office) && relics.length === 0 && minions.every(m => m.befriended)) {
                 gameOver = true;
                 message = 'Office Reached! Duality Embraced!';
             }
-
             // Update pop-ups
             hearts = hearts.filter(heart => heart.timer-- > 0);
             hpPops = hpPops.filter(pop => pop.timer-- > 0);
         }
-
         function draw() {
             ctx.drawImage(backgroundImg, 0, 0, canvas.width, canvas.height);
-
             // Draw maze walls (overlay on background)
             ctx.fillStyle = '#111111';
             walls.forEach(wall => ctx.fillRect(wall.x, wall.y, wall.width, wall.height));
-
             // Draw player (sprite)
             ctx.drawImage(playerImg, player.x, player.y, player.width, player.height);
-
             // Draw relics (silver spheres)
             ctx.fillStyle = '#C0C0C0';
             relics.forEach(relic => {
@@ -286,37 +221,29 @@
                 ctx.arc(relic.x, relic.y, relic.radius, 0, Math.PI * 2);
                 ctx.fill();
             });
-
             // Draw minions (crow sprite)
             minions.forEach(minion => {
                 if (!minion.befriended) {
                     ctx.drawImage(crowImg, minion.x, minion.y, minion.width, minion.height);
                 }
             });
-
             // Draw "CAW!" pop-ups
             ctx.fillStyle = '#FF0000';
             ctx.font = '20px Roboto';
             hearts.forEach(heart => ctx.fillText('CAW!', heart.x, heart.y));
-
             // Draw "-1HP" pop-ups
             ctx.fillStyle = '#FF0000';
             ctx.font = '20px Roboto';
             hpPops.forEach(pop => ctx.fillText('-1HP', pop.x, pop.y));
-
             // Draw shadows (blob sprite)
             shadows.forEach(shadow => ctx.drawImage(blobImg, shadow.x, shadow.y, shadow.width, shadow.height));
-
             // Draw money (sprite)
             money.forEach(m => ctx.drawImage(moneyImg, m.x, m.y, m.width, m.height));
-
             // Draw office desk
             ctx.fillStyle = '#8B4513';
             ctx.fillRect(office.x + 10, office.y + 50, 60, 30);
-
             // Draw office plant (sprite)
             ctx.drawImage(plantImg, office.x + 70, office.y + 20, office.plantWidth, office.plantHeight);
-
             // Draw office bookcase
             ctx.fillStyle = '#8B4513';
             ctx.fillRect(office.x + 10, office.y + 10, 20, 40);
@@ -328,14 +255,12 @@
             ctx.moveTo(office.x + 10, office.y + 30);
             ctx.lineTo(office.x + 30, office.y + 30);
             ctx.stroke();
-
             if (gameOver) {
                 ctx.fillStyle = '#FFFFFF';
                 ctx.font = '30px Roboto';
                 ctx.fillText(message, canvas.width / 2 - 200, canvas.height / 2);
             }
         }
-
         function gameLoop() {
             update();
             draw();
@@ -344,6 +269,4 @@
         gameLoop();
     </script>
 </body>
-
 </html>
-

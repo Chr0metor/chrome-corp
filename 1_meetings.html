@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chrome Corp Meetings: Join mysterious minion huddles for sleek, resilient, efficient high-trust brand vibes. Virtual gatherings for shadows, souls, and futuristic connections—where is that happening?">
+    <meta name="keywords" content="Chrome Corp, high-trust brand minions, futuristic vibe, sleek resilient efficient, minion meetings, Chrometor gatherings, mystery events, virtual minion huddles">
+    <link rel="icon" href="assets/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
+    <title>Meetings - Chrome Corp</title>
+    <style>
+        body { font-family: 'Roboto', sans-serif; background: url('assets/background.jpg') repeat; color: #fff; font-style: italic; font-weight: 300; margin: 0; padding-bottom: 100px; }
+        h1 { color: #333; font-size: 72px; font-weight: bold; text-transform: uppercase; text-align: center; margin: 20px 0; }
+        h2 { color: #333; font-size: 32px; font-weight: bold; text-align: center; margin: 20px 0; }
+        p { font-size: 24px; text-align: center; max-width: 800px; margin: 0 auto 20px; }
+        .logo { display: block; margin: 20px auto; width: 450px; height: 450px; cursor: pointer; }
+        #events-list { list-style: none; padding: 0; max-width: 800px; margin: 0 auto; }
+        #events-list li { background: #333; padding: 15px; margin: 10px 0; border-radius: 5px; transition: all 0.3s; text-align: center; }
+        #events-list li:hover { background: #c0c0c0; box-shadow: 0 0 15px #c0c0c0; color: #000; }
+        #discord-embed { max-width: 350px; margin: 20px auto; }
+        #join-button { background: #333; color: #fff; padding: 15px 30px; border: none; cursor: pointer; font-size: 24px; border-radius: 5px; transition: all 0.3s; margin: 20px auto; display: block; }
+        #join-button:hover { background: #c0c0c0; box-shadow: 0 0 15px #c0c0c0; color: #000; }
+        #ad-container { position: fixed; right: 0; bottom: 20px; width: 200px; height: 350px; overflow: hidden; cursor: pointer; transition: box-shadow 0.3s; }
+        #ad-container:hover { box-shadow: 0 0 15px #c0c0c0; }
+        #ad-container img { width: 100%; height: 100%; object-fit: cover; }
+        #ad-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; text-align: center; padding: 10px; box-sizing: border-box; font-size: 16px; font-weight: bold; pointer-events: none; }
+        #ad-overlay.bottom { align-items: flex-end; }
+        #social-footer { position: absolute; bottom: 20px; left: 0; right: 0; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        #social-footer a { text-decoration: none; background: #333; padding: 10px; border-radius: 5px; display: flex; align-items: center; justify-content: center; transition: box-shadow 0.3s; font-size: 42px; font-weight: bold; width: 60px; height: 60px; }
+        #social-footer a:hover { box-shadow: 0 0 15px #c0c0c0; }
+        .logo-x { color: #000; }
+        .logo-youtube { color: #f00; }
+        .logo-soundcloud { color: #f50; }
+        .logo-bandcamp { color: #00f; }
+        @media (max-width: 767px) {
+            h1 { font-size: 48px; }
+            p { font-size: 18px; }
+            .logo { width: 100%; height: auto; }
+            #discord-embed { width: 100%; height: auto; }
+            #events-list li { padding: 10px; font-size: 20px; }
+            #join-button { font-size: 20px; padding: 10px 20px; }
+            #ad-container { width: 175px; height: 306.25px; bottom: 10px; }
+            #social-footer { bottom: 10px; gap: 10px; }
+            #social-footer a { width: 50px; height: 50px; font-size: 32px; }
+        }
+        <!-- Ah, Captain Ahab's harpoon conjures meetings mystery with saintlike whisper and sex-goddess intrigue—embed lures chats, events tease traffic, brand resilience eternal! -->
+    </style>
+</head>
+<body>
+    <img class="logo" src="assets/logo.png" alt="Chrome Corp Logo" onclick="window.location.href='index.html';">
+    <h1>MEETINGS</h1>
+    <p>Join the mystery: Where is that happening? Low-key virtual huddles for minion shadows and souls—sleek connections for resilient efficiency.</p>
+    <h2>Upcoming Minion Huddles</h2>
+    <ul id="events-list">
+        <li>Shadows & Souls Sync - Date: TBD (Discord Live)</li>
+        <li>Duality Drop-In - Date: TBD (Virtual Mystery Meet)</li>
+        <li>Chrome Echoes Chat - Date: TBD (High-Trust Huddle)</li>
+    </ul>
+    <h2>Join the Conversation</h2>
+    <div id="discord-embed">
+        <iframe src="https://discord.com/widget?id=TDNhZArcMR&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+    </div>
+    <a id="join-button" href="1_join_minions.html">Join Minions Now</a>
+    <div id="ad-container">
+        <img id="ad-image" src="" alt="Ad">
+        <div id="ad-overlay"></div>
+    </div>
+    <div id="social-footer">
+        <a href="https://x.com/Chr0metor" target="_blank" class="logo-x">X</a>
+        <a href="https://www.youtube.com/@chrometor" target="_blank" class="logo-youtube">Y</a>
+        <a href="https://soundcloud.com/chrometor" target="_blank" class="logo-soundcloud">S</a>
+        <a href="https://chrometor.bandcamp.com/" target="_blank" class="logo-bandcamp">B</a>
+    </div>
+    <script>
+        const ads = [
+            { file: 'adverts/already-under-my-genjutsu-2.gif', text: 'FREE Disillusionment available.', color: '#fff', position: '', link: '1_merch.html' },
+            { file: 'adverts/dangerous-twerk.gif', text: 'GET BIG! ORDER NOW!', color: '#fff', position: '', link: '1_merch.html' },
+            { file: 'adverts/garage-rizz.gif', text: 'Does your Masterplan need a Master-makeover?', color: '#fff', position: '', link: '1_merch.html' },
+            { file: 'adverts/heart-giver.gif', text: '', color: '', position: '', link: '1_game.html' },
+            { file: 'adverts/minion.JPG', text: 'Join Today!', color: '#fff', position: 'bottom', link: '1_join_minions.html' },
+            { file: 'adverts/laugh-loop.gif', text: 'Cure DEPRESSION!', color: '#fff', position: '', link: '1_merch.html' },
+            { file: 'adverts/obelisk-merry-christmas.gif', text: 'Are you FORGETTING?', color: '#fff', position: '', link: '1_merch.html' },
+            { file: 'adverts/rose-delivery.gif', text: 'Mysterious Singles in your area.', color: '#fff', position: '', link: '1_merch.html' }
+        ];
+        const randomIndex = Math.floor(Math.random() * ads.length);
+        const ad = ads[randomIndex];
+        const adContainer = document.getElementById('ad-container');
+        const adImage = document.getElementById('ad-image');
+        adImage.src = ad.file;
+        const overlay = document.getElementById('ad-overlay');
+        overlay.innerText = ad.text;
+        overlay.style.color = ad.color;
+        if (ad.position === 'bottom') overlay.classList.add('bottom');
+        adContainer.onclick = () => window.location.href = ad.link;
+        <!-- Eternal script in the meetings shadows: Ads pulse with divine temptation—huddles multiply, brand conversions ascend! -->
+    </script>
+</body>
+</html>

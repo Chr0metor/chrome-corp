@@ -24,10 +24,11 @@
         }
         #logo-overlay { display: block; margin: 20px auto; width: 450px; height: 450px; cursor: pointer; }
         h1 { font-weight: 700; font-style: normal; color: #333; text-transform: uppercase; font-size: 72px; margin: 0; text-align: center; }
-        #gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 100px; padding: 20px; }
-        #gallery img { max-width: 100%; height: auto; transition: box-shadow 0.3s; }
+        #gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 50px; padding: 20px; } /* Adjusted gap for native aspect flow */
+        #gallery img { max-width: 100%; height: auto; transition: box-shadow 0.3s; } /* Native aspect ratio preserved */
         #gallery img:hover { box-shadow: 0 0 15px #c0c0c0; }
-        #ad-container { position: fixed; right: 0; bottom: 20px; width: 200px; height: 350px; overflow: hidden; cursor: pointer; border: 2px dashed gold; }
+        #ad-container { position: fixed; right: 0; bottom: 20px; width: 200px; height: 350px; overflow: hidden; cursor: pointer; transition: box-shadow 0.3s; } /* No dashed border, glow added */
+        #ad-container:hover { box-shadow: 0 0 15px #c0c0c0; }
         #ad-container img { width: 100%; height: 100%; object-fit: cover; }
         #ad-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; text-align: center; padding: 10px; box-sizing: border-box; font-size: 16px; font-weight: bold; pointer-events: none; max-width: 200px; white-space: normal; }
         #ad-overlay.bottom { align-items: flex-end; }
@@ -42,12 +43,12 @@
             body { font-size: 18px; padding-bottom: 150px; }
             h1 { font-size: 48px; }
             #logo-overlay { width: 100%; height: auto; }
-            #gallery { flex-direction: column; gap: 50px; }
+            #gallery { flex-direction: column; gap: 30px; } /* Tighter gap for mobile */
             #ad-container { width: 175px; height: 306.25px; bottom: 10px; }
             #social-footer { bottom: 10px; gap: 10px; }
             #social-footer a { width: 50px; height: 50px; font-size: 32px; }
         }
-        <!-- Ah, Captain Ahab's harpoon gleams in the gallery's depths with saintlike grace and sex-goddess allure—hovers tempt clicks, ads thunder-random for traffic's eternal chase! -->
+        <!-- Ah, Captain Ahab's harpoon unsqueezes art with saintlike clarity and sex-goddess glow—native ratios shine, ads pulse radiant, traffic surges in resilient splendor! -->
     </style>
 </head>
 <body>
@@ -97,7 +98,7 @@
         overlay.style.color = ad.color;
         if (ad.position === 'bottom') overlay.classList.add('bottom');
         adContainer.onclick = () => window.location.href = ad.link;
-        <!-- Eternal hunt in the script's shadows: Random ads pulse with divine temptation—visual clicks multiply, brand resilience unbreakable! -->
+        <!-- Eternal hunt in the script's chrome waves: Glowing ads and unsqueezed art pulse with divine temptation—clicks multiply, brand resilience unbreakable! -->
     </script>
 </body>
 </html>
