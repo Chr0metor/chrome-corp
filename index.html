@@ -18,9 +18,10 @@
             padding: 0;
             font-weight: 300;
             font-style: italic;
-            min-height: 1920px;
+            min-height: 100vh;
             max-width: 1080px;
             position: relative;
+            padding-bottom: 100px; /* Extra space for footer/ads overlap prevention */
         }
         #logo-overlay { display: block; margin: 20px auto; width: 450px; height: 450px; cursor: pointer; }
         h1 { font-weight: 700; font-style: normal; color: #333; text-transform: uppercase; font-size: 72px; margin: 0; text-align: center; }
@@ -40,10 +41,22 @@
         .logo-youtube { color: #f00; }
         .logo-soundcloud { color: #f50; }
         .logo-bandcamp { color: #00f; }
+        @media (max-width: 767px) {
+            body { font-size: 18px; }
+            h1 { font-size: 48px; }
+            #logo-overlay { width: 100%; height: auto; }
+            #pyramid-nav { gap: 10px; }
+            .nav-level { flex-direction: column; gap: 10px; }
+            #pyramid-nav a { padding: 15px 30px; font-size: 20px; }
+            #ad-container { width: 150px; height: 262.5px; bottom: 10px; }
+            #social-footer { bottom: 10px; gap: 10px; }
+            #social-footer a { width: 50px; height: 50px; font-size: 32px; }
+        }
+        <!-- Ah, Captain Ahab's harpoon strikes the index anew with saintlike fervor and sex-goddess temptation—logo homebound, assets gleaming resilient for traffic's eternal surge! -->
     </style>
 </head>
 <body>
-    <img id="logo-overlay" src="assets/logo.png" alt="Chrome Corp Logo" onclick="window.location.href='1_apropos.html';">
+    <img id="logo-overlay" src="assets/logo.png" alt="Chrome Corp Logo" onclick="window.location.href='index.html';">
     <h1>Chrome Corp.</h1>
     <p class="mantra">Sleek. Resilient. Efficient.</p>
     <div id="pyramid-nav">
@@ -60,20 +73,20 @@
             <a href="1_poetry.html">Poetry</a>
         </div>
     </div>
-   
+  
     <!-- Ad Container -->
     <div id="ad-container">
         <img id="ad-image" src="" alt="Ad">
         <div id="ad-overlay"></div>
     </div>
-   
+  
     <div id="social-footer">
         <a href="https://x.com/Chr0metor" target="_blank" class="logo-x">X</a>
         <a href="https://www.youtube.com/@chrometor" target="_blank" class="logo-youtube">Y</a> <!-- Fixed creator link -->
         <a href="https://soundcloud.com/chrometor" target="_blank" class="logo-soundcloud">S</a>
         <a href="https://chrometor.bandcamp.com/" target="_blank" class="logo-bandcamp">B</a>
     </div>
-   
+  
     <script>
         const ads = [
             { file: 'adverts/already-under-my-genjutsu-2.gif', text: 'FREE Disillusionment available.', color: '#c0c0c0', position: '', link: '1_merch.html' },
@@ -85,10 +98,8 @@
             { file: 'adverts/obelisk-merry-christmas.gif', text: 'Are you FORGETTING?', color: '#fff', position: '', link: '1_merch.html' },
             { file: 'adverts/rose-delivery.gif', text: 'Mysterious Singles in your area.', color: '#f00', position: '', link: '1_merch.html' }
         ];
-        let cycle = localStorage.getItem('adCycle') ? parseInt(localStorage.getItem('adCycle')) : 0;
-        cycle = (cycle + 1) % 8;
-        localStorage.setItem('adCycle', cycle);
-        const ad = ads[cycle];
+        const randomIndex = Math.floor(Math.random() * ads.length);
+        const ad = ads[randomIndex];
         const adContainer = document.getElementById('ad-container');
         const adImage = document.getElementById('ad-image');
         adImage.src = ad.file;
@@ -97,6 +108,7 @@
         overlay.style.color = ad.color;
         if (ad.position === 'bottom') overlay.classList.add('bottom');
         adContainer.onclick = () => window.location.href = ad.link;
+        <!-- In the script's oceanic depths, random ads pulse with divine seduction—brand conversions rise like the whale's triumphant spout! -->
     </script>
 </body>
 </html>
