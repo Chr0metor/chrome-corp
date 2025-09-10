@@ -4,183 +4,227 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Chrome Corp Videos: Explore futuristic clips by Chrometor including Snow Way Back, Cold-Blooded Recognition, High-Caliber Solutions, and Embracing Obscurity. Join the sleek, resilient, efficient high-trust brand minions vibe with engaging content!">
-    <meta name="keywords" content="Chrome Corp, high-trust brand minions, futuristic vibe, sleek resilient efficient, Chrometor videos, Snow Way Back, Cold-Blooded Recognition, High-Caliber Solutions, Embracing Obscurity">
+    <meta name="keywords" content="Chrome Corp videos, high-trust brand minions, futuristic vibe, sleek resilient efficient, Chrometor clips, Snow Way Back, Cold-Blooded Recognition, High-Caliber Solutions, Embracing Obscurity">
     <link rel="icon" href="assets/favicon.ico">
-    <title>Videos - Chrome Corp.</title>
+    <title>Videos - Chrome Corp</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
     <style>
-        body { 
-            font-family: 'Roboto', sans-serif; 
-            background-image: url('assets/background.jpg'); 
-            background-repeat: repeat; 
-            background-position: center; 
-            color: #333; 
-            text-align: center; 
-            padding: 20px; 
-            font-style: italic; 
-            min-height: 1080px; 
-            display: flex; 
-            flex-direction: column; 
-            max-width: 1080px; 
-            margin: 0 auto; 
-            position: relative; 
+        body {
+            background-image: url('assets/background.jpg');
+            background-repeat: repeat;
+            background-size: auto;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 20px;
+            color: #fff;
+            max-width: 1080px;
+            margin: 0 auto;
+            position: relative;
+            padding-bottom: 150px; /* Extra spacing to ensure footer stays below content */
+            font-weight: 300;
+            font-style: italic;
+            display: flex;
+            flex-direction: column;
         }
-        h1 { 
-            font-weight: bold; 
-            font-style: normal; 
-            font-size: 72px; 
+        #logo-overlay {
+            display: block;
+            margin: 20px auto;
+            max-width: 450px;
+            max-height: 450px;
+            width: 450px;
+            height: 450px;
+            cursor: pointer;
         }
-        .video-section { 
-            max-width: 600px; 
-            margin: 20px auto; 
-            background-color: #333; 
-            padding: 20px; 
-            border-radius: 10px; 
-            color: #C0C0C0; 
+        h1 {
+            color: #333;
+            font-size: 72px;
+            font-weight: bold;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 10px;
         }
-        .video-title { 
-            font-weight: bold; 
-            font-style: normal; 
-            font-size: 24px; 
-            color: #FFF; 
-            margin-bottom: 10px; 
+        .video-section {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            color: #c0c0c0;
+            transition: box-shadow 0.3s;
         }
-        video { 
-            width: 100%; 
-            border-radius: 10px; 
+        .video-section:hover {
+            box-shadow: 0 0 15px #c0c0c0;
         }
-        .video-desc { 
-            margin-top: 10px; 
-            font-size: 16px; 
+        .video-title {
+            font-weight: bold;
+            font-style: normal;
+            font-size: 24px;
+            color: #fff;
+            margin-bottom: 10px;
         }
-        .advert { 
-            position: fixed; 
-            bottom: 20px; 
-            left: 20px; 
-            z-index: 10; 
-            width: 200px; 
-            height: 350px; 
-            display: flex; 
-            flex-direction: column; 
-            justify-content: flex-end; 
-            text-decoration: none; 
-            border-radius: 10px; 
-            overflow: hidden; 
-            background-color: #808080; 
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); 
-            transition: box-shadow 0.3s ease; 
+        video {
+            width: 100%;
+            border-radius: 10px;
         }
-        .advert:hover { box-shadow: 0 0 20px rgba(255, 255, 255, 1); }
-        .advert-img { 
-            width: 100%; 
-            height: 100%; 
-            object-fit: contain; 
-            position: absolute; 
-            top: 0; 
-            left: 0; 
+        .video-desc {
+            margin-top: 10px;
+            font-size: 16px;
         }
-        .advert-text { 
-            position: relative; 
-            z-index: 1; 
-            background-color: rgba(0, 0, 0, 0.7); 
-            color: white; 
-            padding: 5px; 
-            text-align: center; 
-            font-style: normal; 
-            font-weight: bold; 
+        #ad-container {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 10;
+            width: 200px;
+            height: 350px;
+            overflow: hidden;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: box-shadow 0.3s;
+            background-color: #808080;
         }
-        footer { 
-            margin-top: auto; 
-            padding: 10px 0; 
+        #ad-container:hover {
+            box-shadow: 0 0 20px #c0c0c0;
         }
-        footer a { 
-            text-decoration: none; 
-            font-style: normal; 
-            font-size: 42px; 
-            margin: 0 10px; 
-            display: inline-block; 
-            padding: 10px 20px; 
-            background-color: #808080; 
-            border-radius: 20px; 
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); 
-            transition: box-shadow 0.3s ease; 
+        #ad-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        #ad-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 5px;
+            text-align: center;
+            font-style: normal;
+            font-weight: bold;
+            box-sizing: border-box;
+        }
+        footer {
+            margin-top: auto;
+            padding: 10px 0;
+            text-align: center;
+        }
+        footer a {
+            text-decoration: none;
+            font-style: normal;
+            font-size: 42px;
+            margin: 0 10px;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #808080;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            transition: box-shadow 0.3s ease;
         }
         footer a:hover { box-shadow: 0 0 20px rgba(255, 255, 255, 1); }
+        .logo-x { color: #000; }
+        .logo-youtube { color: #f00; }
+        .logo-soundcloud { color: #f50; }
+        .logo-bandcamp { color: #00f; }
+        @media (max-width: 767px) {
+            body {
+                padding: 10px;
+                max-width: 100%;
+            }
+            #logo-overlay {
+                width: 100%;
+                height: auto;
+                max-height: none;
+            }
+            h1 {
+                font-size: 48px;
+            }
+            .video-section {
+                max-width: 100%;
+                padding: 15px;
+            }
+            #ad-container {
+                width: 100px; /* Tiny for mobile */
+                height: 175px;
+                bottom: 10px;
+                left: 10px;
+                opacity: 0.8; /* Semi-transparent until hover */
+                transition: opacity 0.3s, box-shadow 0.3s;
+            }
+            #ad-container:hover {
+                opacity: 1;
+            }
+            footer a {
+                font-size: 28px;
+                padding: 8px 16px;
+            }
+        }
     </style>
 </head>
 <body>
-    <a href="index.html">
-        <img src="assets/logo.png" alt="Chrome Corp Logo" style="width: 450px; height: 450px; margin-bottom: 20px; display: block; margin-left: auto; margin-right: auto;">
-    </a>
-
+    <a href="index.html"><img id="logo-overlay" src="assets/logo.png" alt="Chrome Corp Logo"></a>
     <h1>Videos</h1>
-
     <div class="video-section">
         <div class="video-title">Snow Way Back</div>
         <video controls loop>
             <source src="https://video.twimg.com/amplify_video/1938049786847830016/vid/avc1/320x568/pUxWo2PgL08zZfgJ.mp4" type="video/mp4">
-            Yer browser ain't vibin' with videos.
+            Your browser does not support the video tag.
         </video>
         <p class="video-desc">I got the nevermeltice, but at what cost? More like a discount, not completely free. I'm sure he's fine.</p>
     </div>
-
     <div class="video-section">
         <div class="video-title">Cold-Blooded Recognition</div>
         <video controls loop>
             <source src="https://video.twimg.com/ext_tw_video/1885530661630406656/pu/vid/avc1/320x568/hs9PkAb_jg0xrJt0.mp4?tag=14" type="video/mp4">
-            Yer browser ain't vibin' with videos.
+            Your browser does not support the video tag.
         </video>
         <p class="video-desc">Warm-blooded mammal gets recognized for cold-blooded actions!</p>
     </div>
-
     <div class="video-section">
         <div class="video-title">High-Caliber Solutions</div>
         <video controls loop>
             <source src="https://video.twimg.com/ext_tw_video/1855766520816959488/pu/vid/avc1/320x568/Xh-Lt82l_t0gjRxZ.mp4?tag=12" type="video/mp4">
-            Yer browser ain't vibin' with videos.
+            Your browser does not support the video tag.
         </video>
         <p class="video-desc">Some problems are not solved with the press of a button, but with high-caliber futuristic weapons triggered by those buttons. And by high caliber futuristic weapon, I mean me.</p>
     </div>
-
     <div class="video-section">
         <div class="video-title">Embracing Obscurity</div>
         <video controls loop>
             <source src="https://video.twimg.com/ext_tw_video/1763314503771631616/pu/vid/avc1/480x270/aM2Z2r8N6loEHovn.mp4?tag=12" type="video/mp4">
-            Yer browser ain't vibin' with videos.
+            Your browser does not support the video tag.
         </video>
         <p class="video-desc">Obscurity...what does it mean to embrace this and grow strong? What is obscurity but a blessing the famous seek and the unknown wish to discard? This uncanny obscurity, it must be more than the silence in chaos or the tree in a forest.</p>
     </div>
-
-    <a id="random-advert" class="advert" href="#">
-        <img id="advert-img" class="advert-img" src="" alt="advert">
-        <div id="advert-text" class="advert-text"></div>
-    </a>
-
+    <div id="ad-container">
+        <img id="ad-image" src="" alt="Ad">
+        <div id="ad-overlay"></div>
+    </div>
     <footer>
-        <a href="https://x.com/Chr0metor" style="color: #000;">X</a>
-        <a href="https://www.youtube.com/@chrometor" style="color: #FF0000;">Y</a>
-        <a href="https://soundcloud.com/chrometor" style="color: #FFA500;">S</a>
-        <a href="https://chrometor.bandcamp.com/" style="color: #0000FF;">B</a>
+        <a href="https://x.com/Chr0metor" class="logo-x">X</a>
+        <a href="https://www.youtube.com/@chrometor" class="logo-youtube">Y</a>
+        <a href="https://soundcloud.com/chrometor" class="logo-soundcloud">S</a>
+        <a href="https://chrometor.bandcamp.com/" class="logo-bandcamp">B</a>
     </footer>
-
     <script>
-        // advert cycle, vibin' random per refresh
         const ads = [
-            { src: 'adverts/already-under-my-genjutsu-2.gif', text: 'FREE Disillusionment available.', color: 'white', link: '1_merch.html' },
-            { src: 'adverts/dangerous-twerk.gif', text: 'GET BIG! ORDER NOW!', color: 'white', link: '1_merch.html' },
-            { src: 'adverts/garage-rizz.gif', text: 'Does your Masterplan need a Master-makeover?', color: 'white', link: '1_merch.html' },
-            { src: 'adverts/heart-giver.gif', text: '', color: 'white', link: '1_game.html' },
-            { src: 'adverts/minion.JPG', text: 'Join Today!', color: 'white', link: '1_minion_application.html' },
-            { src: 'adverts/laugh-loop.gif', text: 'Cure DEPRESSION!', color: 'white', link: '1_merch.html' },
-            { src: 'adverts/obelisk-merry-christmas.gif', text: 'Are you FORGETTING something?', color: 'white', link: '1_merch.html' },
-            { src: 'adverts/rose-delivery.gif', text: 'Mysterious Singles in your area.', color: 'white', link: '1_merch.html' }
+            { file: 'adverts/already-under-my-genjutsu-2.gif', text: 'FREE Disillusionment available.', link: '1_merch.html' },
+            { file: 'adverts/dangerous-twerk.gif', text: 'GET BIG! ORDER NOW!', link: '1_merch.html' },
+            { file: 'adverts/garage-rizz.gif', text: 'Does your Masterplan need a Master-makeover?', link: '1_merch.html' },
+            { file: 'adverts/heart-giver.gif', text: '', link: '1_game.html' },
+            { file: 'adverts/minion.JPG', text: 'Join Today!', link: '1_join_minions.html' },
+            { file: 'adverts/laugh-loop.gif', text: 'Cure DEPRESSION!', link: '1_merch.html' },
+            { file: 'adverts/obelisk-merry-christmas.gif', text: 'Are you FORGETTING?', link: '1_merch.html' },
+            { file: 'adverts/rose-delivery.gif', text: 'Mysterious Singles in your area.', link: '1_merch.html' }
         ];
-        const randomAd = ads[Math.floor(Math.random() * ads.length)];
-        document.getElementById('random-advert').href = randomAd.link;
-        document.getElementById('advert-img').src = randomAd.src;
-        const textDiv = document.getElementById('advert-text');
-        textDiv.textContent = randomAd.text;
-        textDiv.style.color = randomAd.color;
+        const randomIndex = Math.floor(Math.random() * ads.length);
+        const ad = ads[randomIndex];
+        const adContainer = document.getElementById('ad-container');
+        const adImage = document.getElementById('ad-image');
+        adImage.src = ad.file;
+        const overlay = document.getElementById('ad-overlay');
+        overlay.innerText = ad.text;
+        adContainer.onclick = () => window.location.href = ad.link;
     </script>
 </body>
-
 </html>
