@@ -2,60 +2,156 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Chrome Corp Merch of Virtue: Shop futuristic high-trust brand minions gear like Schwarzschild T-Shirts, Patches, and Posters. Sleek, resilient, efficient vibes to build your edgy poetic soul!">
-    <meta name="keywords" content="Chrome Corp, high-trust brand minions, futuristic vibe, sleek resilient efficient, Chrome Corp merch, Schwarzschild T-Shirt, Chrome Corp Patch, Movie-Sized Poster">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chrome Corp.-Shoppe</title>
+    <meta name="description" content="Chrome Corp Merch: Shop futuristic high-trust brand minions gear like Schwarzschild T-Shirts, Patches, and Posters. Sleek, resilient, efficient vibes for your edgy poetic soul!">
+    <meta name="keywords" content="Chrome Corp merch, high-trust brand minions, futuristic vibe, sleek resilient efficient, Schwarzschild T-Shirt, Chrome Corp Patch, Movie-Sized Poster, Chrometor">
     <link rel="icon" href="assets/favicon.ico">
+    <title>Merch - Chrome Corp</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
-        html { height: 100%; }
-        body { 
-            font-family: 'Roboto', sans-serif; 
-            background: url('assets/background.jpg') repeat center center / auto; 
-            color: #fff; 
-            margin: 0 auto; 
-            padding: 0; 
-            font-weight: 300; 
-            font-style: italic; 
-            min-height: 1920px; 
-            max-width: 1080px; 
-            position: relative; 
+        body {
+            background-image: url('assets/background.jpg');
+            background-repeat: repeat;
+            background-size: auto;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 20px;
+            color: #fff;
+            max-width: 1080px;
+            margin: 0 auto;
+            position: relative;
+            padding-bottom: 120px; /* Extra space to shove footer to absolute bottom, no overlaps */
+            font-weight: 300;
+            font-style: italic;
         }
-        #logo-overlay { display: block; margin: 20px auto; width: 450px; height: 450px; cursor: pointer; }
-        h1 { font-weight: 700; font-style: normal; color: #333; text-transform: uppercase; font-size: 72px; margin: 0; text-align: center; }
-        p.mantra { text-align: center; font-size: 24px; margin: 10px 0; font-style: italic; color: #333; }
-        #merch-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; padding: 20px; }
-        .merch-item { text-align: center; max-width: 300px; }
-        .merch-item img { width: 100%; height: auto; box-shadow: 0 0 15px #c0c0c0; cursor: pointer; }
-        .merch-item h3 { font-size: 24px; margin: 10px 0 5px; color: #333; }
-        .merch-item p { font-size: 16px; color: #333; } /* Dark gray */
-        #social-footer { position: absolute; bottom: 20px; left: 0; right: 0; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
-        #social-footer a { text-decoration: none; background: #333; padding: 10px; border-radius: 5px; display: flex; align-items: center; justify-content: center; transition: box-shadow 0.3s; font-size: 42px; font-weight: bold; width: 60px; height: 60px; }
+        #logo-overlay {
+            display: block;
+            margin: 20px auto;
+            max-width: 450px;
+            max-height: 450px;
+            width: 450px;
+            height: 450px;
+            cursor: pointer;
+        }
+        h1 {
+            color: #333;
+            font-size: 72px;
+            font-weight: bold;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        #merch-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            padding: 20px;
+        }
+        .merch-item {
+            text-align: center;
+            max-width: 300px;
+        }
+        .merch-item img {
+            width: 100%;
+            height: auto;
+            transition: box-shadow 0.3s;
+            border-radius: 5px;
+        }
+        .merch-item img:hover {
+            box-shadow: 0 0 15px #c0c0c0;
+        }
+        .merch-item h3 {
+            font-size: 24px;
+            margin: 10px 0 5px;
+            color: #333;
+            font-weight: bold;
+            font-style: normal;
+        }
+        .merch-item p {
+            font-size: 16px;
+            color: #333;
+            margin: 0;
+        }
+        #social-footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 10px 0; /* Inner padding for breathing room */
+        }
+        #social-footer a {
+            text-decoration: none;
+            background: #333;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: box-shadow 0.3s;
+            font-size: 30px; /* Resized as commanded */
+            font-weight: bold;
+            width: 50px;
+            height: 50px; /* Adjusted for smaller font */
+        }
         #social-footer a:hover { box-shadow: 0 0 15px #c0c0c0; }
         .logo-x { color: #000; }
         .logo-youtube { color: #f00; }
         .logo-soundcloud { color: #f50; }
         .logo-bandcamp { color: #00f; }
+        @media (max-width: 767px) {
+            body {
+                padding: 10px;
+                max-width: 100%;
+            }
+            #logo-overlay {
+                width: 100%;
+                height: auto;
+                max-height: none;
+            }
+            h1 {
+                font-size: 48px;
+            }
+            #merch-grid {
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+            }
+            .merch-item {
+                max-width: 100%;
+            }
+            #social-footer {
+                gap: 10px;
+                padding: 5px 0;
+            }
+            #social-footer a {
+                width: 40px;
+                height: 40px;
+                font-size: 22px; /* Scaled for mobile */
+            }
+        }
     </style>
 </head>
 <body>
-    <img id="logo-overlay" src="assets/logo.png" alt="Chrome Corp Logo" onclick="window.location.href='index.html';">
-    <h1>Chrome Corp.</h1>
-    <p class="mantra">Merch of Virtue</p>
+    <a href="index.html"><img id="logo-overlay" src="assets/logo.png" alt="Chrome Corp Logo"></a>
+    <h1>Merch</h1>
     <section id="merch-grid">
         <div class="merch-item">
-            <img src="assets/merch/schwarzschild-tee.jpg" alt="Hand-painted Schwarzschild Tee" onclick="window.location.href='https://chrometor.bandcamp.com/merch/schwarzschild-t-shirt';">
+            <a href="https://chrometor.bandcamp.com/merch/schwarzschild-t-shirt" target="_blank"><img src="assets/merch/schwarzschild-tee.jpg" alt="Hand-painted Schwarzschild Tee"></a>
             <h3>Home-made Schwarzschild T-Shirt</h3>
-            <p>Show everyone the edgy, poetic soul underneath with this classic T-shirt.</p>
+            <p>Show everyone the edgy, poetic soul underneath with this classic hand-painted T-shirt. Every shirt turns out a little different from the others!</p>
         </div>
         <div class="merch-item">
-            <img src="assets/merch/chrome-corp-patch.png" alt="Chrome Corp. Iron-on Patch (Pre-order)">
+            <a href="https://chrometor.bandcamp.com/merch/chrome-corp-patch" target="_blank"><img src="assets/merch/chrome-corp-patch.png" alt="Chrome Corp. Iron-on Patch (Pre-order)"></a>
             <h3>Chrome Corp Patch</h3>
-            <p>A shiny badge which makes you apart of the team of minions working for Chrome Corp.</p>
+            <p>A shiny badge which makes you apart of the team of minions working for Chrometor.</p>
         </div>
         <div class="merch-item">
-            <img src="assets/merch/chrome-corp-poster.jpg" alt="Chrome Corp Poster">
+            <a href="https://chrometor.bandcamp.com/merch/chrome-corp-poster" target="_blank"><img src="assets/merch/chrome-corp-poster.jpg" alt="Chrome Corp Poster"></a>
             <h3>Chrome Corp Movie-Sized Poster</h3>
             <p>Movie Deal pending, but you can enjoy the origin story of Chrometor in your imagination with the help of a 40"x26" poster.</p>
         </div>
@@ -66,6 +162,5 @@
         <a href="https://soundcloud.com/chrometor" target="_blank" class="logo-soundcloud">S</a>
         <a href="https://chrometor.bandcamp.com/" target="_blank" class="logo-bandcamp">B</a>
     </div>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97b1bdf02d10e556',t:'MTc1NzIwMTI5OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
-
+</body>
 </html>
