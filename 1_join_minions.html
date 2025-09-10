@@ -20,7 +20,7 @@
             max-width: 1080px;
             margin: 0 auto;
             position: relative;
-            padding-bottom: 100px; /* Space for footer */
+            padding-bottom: 120px; /* Extra space to shove footer to absolute bottom, no overlaps */
         }
         #logo-overlay {
             display: block;
@@ -109,13 +109,14 @@
         }
         #social-footer {
             position: absolute;
-            bottom: 20px;
+            bottom: 0;
             left: 0;
             right: 0;
             display: flex;
             justify-content: center;
             gap: 20px;
             flex-wrap: wrap;
+            padding: 10px 0; /* Inner padding for breathing room */
         }
         #social-footer a {
             text-decoration: none;
@@ -126,10 +127,10 @@
             align-items: center;
             justify-content: center;
             transition: box-shadow 0.3s;
-            font-size: 42px;
+            font-size: 30px; /* Resized as commanded */
             font-weight: bold;
-            width: 60px;
-            height: 60px;
+            width: 50px;
+            height: 50px; /* Adjusted for smaller font */
         }
         #social-footer a:hover { box-shadow: 0 0 15px #c0c0c0; }
         .logo-x { color: #000; }
@@ -173,16 +174,15 @@
                 padding: 8px;
             }
             #social-footer {
-                bottom: 10px;
                 gap: 10px;
+                padding: 5px 0;
             }
             #social-footer a {
                 width: 40px;
                 height: 40px;
-                font-size: 28px;
+                font-size: 22px; /* Scaled for mobile */
             }
         }
-        <!-- Ah, Captain Ahab's harpoon crafts a sleek join form with saintlike clarity and sex-goddess allure—shaded banner shines, luring minions for traffic surges and brand trust! -->
     </style>
 </head>
 <body>
@@ -259,7 +259,6 @@
                 alert('Oopsy-daisy! Good thing nobody got hurt! Try again!?');
             });
         });
-        <!-- Eternal chase in the script's chrome depths: Form pulses with divine temptation—banner gleams, conversions ascend for brand's resilient thunder! -->
     </script>
 </body>
 </html>
