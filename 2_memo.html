@@ -54,11 +54,22 @@
             font-size: 21px; /* Reduced 50% from 42px */
             font-weight: 400;
             font-style: normal;
+            display: flex;
+            align-items: center;
         }
         #content li.heading {
             font-weight: bold;
             font-size: 24px; /* Slightly larger for headings */
             margin-top: 20px;
+        }
+        #content li input[type="checkbox"] {
+            margin-right: 10px;
+            transform: scale(1.5); /* Larger checkboxes for easy taps */
+            cursor: pointer;
+        }
+        #content li.checked {
+            text-decoration: line-through;
+            color: #808080; /* Grayed out for completed tasks */
         }
         #social-footer {
             position: absolute;
@@ -109,6 +120,9 @@
             #content li.heading {
                 font-size: 16px;
             }
+            #content li input[type="checkbox"] {
+                transform: scale(1.2); /* Adjusted for mobile taps */
+            }
             #social-footer {
                 gap: 10px;
                 padding: 5px 0;
@@ -127,34 +141,47 @@
     <div id="content">
         <ul>
             <li class="heading">Video</li>
-            <li>Shoot long video.</li>
-            <li>"In the Arms of a snow Angel"</li>
-            <li>"Super-Cool Ending"</li>
-            <li>"Lost and Found"</li>
-            <li>"Corvids in space"</li>
-            <li>Commercial for Repashy Bluey-Buffet: *Ingredients of Repashy* .Blended together! Your skink will love it.</li>
-            <li>Commercial for Liquid Death: Chrometor Pours a can of liquid death over his head and body. The liquid is "Breathed in" through his backlava through a reverse frame shot of the water evaporating out of his clothing. (very difficult shot)</li>
-            <li>Set-Up THUNDER GRUNT news network series, Grok powered!</li>
-            <li>"the Fez" - Steely Dan music video with shots of Chrometor and the minions wearing a fez.</li>
-            <li>"the Stranger" - Billy Joel Music video with shots of chrometor in nice action scenes from the past.</li>
+            <li><input type="checkbox" data-index="0"> Shoot long video.</li>
+            <li><input type="checkbox" data-index="1"> "In the Arms of a snow Angel"</li>
+            <li><input type="checkbox" data-index="2"> "Super-Cool Ending"</li>
+            <li><input type="checkbox" data-index="3"> "Lost and Found"</li>
+            <li><input type="checkbox" data-index="4"> "Corvids in space"</li>
+            <li><input type="checkbox" data-index="5"> Commercial for Repashy Bluey-Buffet: *Ingredients of Repashy* .Blended together! Your skink will love it.</li>
+            <li><input type="checkbox" data-index="6"> Commercial for Liquid Death: Chrometor Pours a can of liquid death over his head and body. The liquid is "Breathed in" through his backlava through a reverse frame shot of the water evaporating out of his clothing. (very difficult shot)</li>
+            <li><input type="checkbox" data-index="7"> Set-Up THUNDER GRUNT news network series, Grok powered!</li>
+            <li><input type="checkbox" data-index="8"> "the Fez" - Steely Dan music video with shots of Chrometor and the minions wearing a fez.</li>
+            <li><input type="checkbox" data-index="9"> "the Stranger" - Billy Joel Music video with shots of chrometor in nice action scenes from the past.</li>
             <li class="heading">Music</li>
-            <li>Compose Paratrophic.</li>
-            <li>"FRUGAL" Hip-hop boss song. "gilded chrome, (looks at reflection) never alone. Because the chrome is reflective.</li>
+            <li><input type="checkbox" data-index="10"> Compose Paratrophic.</li>
+            <li><input type="checkbox" data-index="11"> "FRUGAL" Hip-hop boss song. "gilded chrome, (looks at reflection) never alone. Because the chrome is reflective.</li>
             <li class="heading">Writing</li>
-            <li>Write Genesis, Legacy, Forever</li>
+            <li><input type="checkbox" data-index="12"> Write Genesis, Legacy, Forever</li>
             <li class="heading">Procurement</li>
-            <li>Print New Business Cards and supply new merchandise to store, including the patch.</li>
-            <li>Shoppe for Silver Paint/Sharpies/Voice Box on amazon.</li>
-            <li>Make the TNT Prop.</li>
-            <li>Metallic Paint for Office walls</li>
-            <li>Manufacture Chrome Corp Patches</li>
-            <li>Find a new pair of gloves: the best pair. And a metallic tie!</li>
-            <li>Need Walnuts, ready-edits</li>
-            <li>Need to test and use fog machine at different times, testing lighting, angles, shots.</li>
-            <li>Need cup of tea with tea bag in it.</li>
-            <li>Need "CCTV" footage of charlie screaming in space for like, 10 seconds.</li>
-            <li>rewrite lines to be shorter, better.</li>
-            <li>Need Greenscreen footage of charlie and janitor.</li>
+            <li><input type="checkbox" data-index="13"> Print New Business Cards and supply new merchandise to store, including the patch.</li>
+            <li><input type="checkbox" data-index="14"> Shoppe for Silver Paint/Sharpies/Voice Box on amazon.</li>
+            <li><input type="checkbox" data-index="15"> Make the TNT Prop.</li>
+            <li><input type="checkbox" data-index="16"> Metallic Paint for Office walls</li>
+            <li><input type="checkbox" data-index="17"> Manufacture Chrome Corp Patches</li>
+            <li><input type="checkbox" data-index="18"> Find a new pair of gloves: the best pair. And a metallic tie!</li>
+            <li><input type="checkbox" data-index="19"> Need Walnuts, ready-edits</li>
+            <li><input type="checkbox" data-index="20"> Need to test and use fog machine at different times, testing lighting, angles, shots.</li>
+            <li><input type="checkbox" data-index="21"> Need cup of tea with tea bag in it.</li>
+            <li><input type="checkbox" data-index="22"> Need "CCTV" footage of charlie screaming in space for like, 10 seconds.</li>
+            <li><input type="checkbox" data-index="23"> rewrite lines to be shorter, better.</li>
+            <li><input type="checkbox" data-index="24"> Need Greenscreen footage of charlie and janitor.</li>
+            <li><input type="checkbox" data-index="25"> BUILT A WEBSITE</li>
+            <li><input type="checkbox" data-index="26"> Shoppe for Silver Paint/Sharpies/Voice Box on amazon.</li>
+            <li><input type="checkbox" data-index="27"> Buy a voice box with mic for modifying character voice.</li>
+            <li><input type="checkbox" data-index="28"> Shoot long video.</li>
+            <li><input type="checkbox" data-index="29"> Metallic Paint for Office walls</li>
+            <li><input type="checkbox" data-index="30"> Make the TNT Prop.</li>
+            <li><input type="checkbox" data-index="31"> Chrome Corp Job Application for Minion - needs to be fleshed out on website.</li>
+            <li><input type="checkbox" data-index="32"> Kenku Makeover: add more feathers and better outfit.</li>
+            <li><input type="checkbox" data-index="33"> Manufacture Chrome Corp Patches</li>
+            <li><input type="checkbox" data-index="34"> Finish "Cool Saga" video series.</li>
+            <li><input type="checkbox" data-index="35"> Video On Evil.</li>
+            <li><input type="checkbox" data-index="36"> Publish new business card.</li>
+            <li><input type="checkbox" data-index="37"> Remix Stormchaser Mixtape for weather people.</li>
         </ul>
     </div>
     <div id="social-footer">
@@ -163,5 +190,16 @@
         <a href="https://soundcloud.com/chrometor" target="_blank" class="logo-soundcloud">S</a>
         <a href="https://chrometor.bandcamp.com/" target="_blank" class="logo-bandcamp">B</a>
     </div>
+    <script>
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        checkboxes.forEach((checkbox, index) => {
+            checkbox.checked = localStorage.getItem(`memo-task-${index}`) === 'true';
+            checkbox.parentElement.classList.toggle('checked', checkbox.checked);
+            checkbox.addEventListener('change', () => {
+                localStorage.setItem(`memo-task-${index}`, checkbox.checked);
+                checkbox.parentElement.classList.toggle('checked', checkbox.checked);
+            });
+        });
+    </script>
 </body>
 </html>

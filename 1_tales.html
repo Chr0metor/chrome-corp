@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chrome Corp Minion Tales: Share your testimonials as a high-trust brand minion! Join the sleek, resilient, efficient vibe with Chrometor and submit your story.">
+    <meta name="keywords" content="Chrome Corp tales, high-trust brand minions, futuristic vibe, sleek resilient efficient, minion testimonials, Chrometor stories, submit minion testimonial">
+    <link rel="icon" href="assets/favicon.ico">
+    <title>Tales - Chrome Corp</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('assets/background.jpg');
+            background-repeat: repeat;
+            background-size: auto;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 20px;
+            color: #fff;
+            max-width: 1080px;
+            margin: 0 auto;
+            position: relative;
+            padding-bottom: 150px; /* Space for footer */
+            font-weight: 300;
+            font-style: italic;
+        }
+        #logo-overlay {
+            display: block;
+            margin: 20px auto;
+            max-width: 450px;
+            max-height: 450px;
+            width: 450px;
+            height: 450px;
+            cursor: pointer;
+        }
+        h1 {
+            color: #333;
+            font-size: 72px;
+            font-weight: bold;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #333;
+            font-size: 32px;
+            font-weight: bold;
+            text-align: center;
+            margin: 20px 0;
+        }
+        p.intro {
+            color: #333;
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px 40px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-style: italic;
+            color: #c0c0c0;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            font-family: 'Roboto', sans-serif;
+        }
+        button {
+            display: block;
+            margin: 20px auto 0;
+            padding: 15px 30px;
+            background: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px #c0c0c0;
+            transition: box-shadow 0.3s;
+        }
+        button:hover {
+            background: #c0c0c0;
+            box-shadow: 0 0 20px #c0c0c0;
+            color: #000;
+        }
+        .testimonial {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            color: #c0c0c0;
+            transition: box-shadow 0.3s;
+        }
+        .testimonial:hover {
+            box-shadow: 0 0 15px #c0c0c0;
+        }
+        .testimonial p {
+            font-size: 18px;
+            line-height: 1.5;
+            margin: 10px 0;
+        }
+        #social-footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 10px 0;
+        }
+        #social-footer a {
+            text-decoration: none;
+            background: #333;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: box-shadow 0.3s;
+            font-size: 30px;
+            font-weight: bold;
+            width: 50px;
+            height: 50px;
+        }
+        #social-footer a:hover { box-shadow: 0 0 15px #c0c0c0; }
+        .logo-x { color: #000; }
+        .logo-youtube { color: #f00; }
+        .logo-soundcloud { color: #f50; }
+        .logo-bandcamp { color: #00f; }
+        @media (max-width: 767px) {
+            body {
+                padding: 10px;
+                max-width: 100%;
+            }
+            #logo-overlay {
+                width: 100%;
+                height: auto;
+                max-height: none;
+            }
+            h1 {
+                font-size: 48px;
+            }
+            h2 {
+                font-size: 24px;
+            }
+            form {
+                padding: 10px 20px;
+            }
+            button {
+                width: 100%;
+                font-size: 20px;
+                padding: 12px;
+            }
+            .testimonial {
+                padding: 15px;
+            }
+            .testimonial p {
+                font-size: 16px;
+            }
+            #social-footer {
+                gap: 10px;
+                padding: 5px 0;
+            }
+            #social-footer a {
+                width: 40px;
+                height: 40px;
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html"><img id="logo-overlay" src="assets/logo.png" alt="Chrome Corp Logo"></a>
+    <h1>Tales</h1>
+    <p class="intro">Share your minion testimonial! Tell us about your rewards or adventures with Chrome Corp.</p>
+    <form action="https://formspree.io/f/meolpryn" method="POST" id="testimonial-form">
+        <label>Minion Name:</label>
+        <input type="text" name="minion_name" required>
+        <label>Testimonial:</label>
+        <textarea name="testimonial" required></textarea>
+        <label>Email:</label>
+        <input type="email" name="email" required>
+        <input type="hidden" name="_subject" value="New Minion Testimonial Submission!">
+        <input type="text" name="_gotcha" style="display:none;">
+        <button type="submit">Submit Testimonial!</button>
+    </form>
+    <h2>Minion Testimonials</h2>
+    <div class="testimonial">
+        <p>"Got the reward I wanted! The Schwarzschild T-Shirt is sleek and makes me feel like a true Chrome Corp minion—resilient against boredom!" - Echo the Kenku</p>
+    </div>
+    <div class="testimonial">
+        <p>"Joined as an AI Clone and got my custom voice box—efficient vibes all day! The patch is shiny perfection." - Binary Bob</p>
+    </div>
+    <div class="testimonial">
+        <p>"The poster hangs in my lair—no movie deal needed when the tales are this epic! High-trust brand for life." - Shadow Janitor</p>
+    </div>
+    <!-- Add more approved testimonials here manually or via backend later -->
+    <div id="social-footer">
+        <a href="https://x.com/Chr0metor" target="_blank" class="logo-x">X</a>
+        <a href="https://www.youtube.com/@chrometor" target="_blank" class="logo-youtube">Y</a>
+        <a href="https://soundcloud.com/chrometor" target="_blank" class="logo-soundcloud">S</a>
+        <a href="https://chrometor.bandcamp.com/" target="_blank" class="logo-bandcamp">B</a>
+    </div>
+    <script>
+        const form = document.getElementById('testimonial-form');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = form.email.value;
+            const validTLDs = ['.com', '.net', '.org', '.edu', '.io', '.co', '.biz']; // Common valid TLDs
+            const endsWithValidTLD = validTLDs.some(tld => email.toLowerCase().endsWith(tld));
+            if (!endsWithValidTLD) {
+                alert('Please use a valid email address (e.g., ending with .com, .net, etc.).');
+                return;
+            }
+            const formData = new FormData(form);
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            }).then(response => {
+                if (response.ok) {
+                    form.innerHTML = '<h2>Your testimonial is submitted, minion!</h2><p>The Boss will review it. Head back to <a href="index.html">home</a> or check <a href="1_merch.html">merch</a>.</p>';
+                } else {
+                    alert('Oopsy-daisy! Try again?');
+                }
+            }).catch(error => {
+                alert('Oopsy-daisy! Try again?');
+            });
+        });
+    </script>
+</body>
+</html>
