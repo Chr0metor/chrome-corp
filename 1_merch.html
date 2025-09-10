@@ -20,7 +20,7 @@
             max-width: 1080px;
             margin: 0 auto;
             position: relative;
-            padding-bottom: 150px; /* Increased for extra spacing to prevent footer from blocking content */
+            padding-bottom: 50px; /* Reduced since footer removed */
             font-weight: 300;
             font-style: italic;
         }
@@ -73,36 +73,6 @@
             color: #333;
             margin: 0;
         }
-        #social-footer {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            padding: 10px 0; /* Inner padding for breathing room */
-        }
-        #social-footer a {
-            text-decoration: none;
-            background: #333;
-            padding: 10px;
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: box-shadow 0.3s;
-            font-size: 30px; /* Resized as commanded */
-            font-weight: bold;
-            width: 50px;
-            height: 50px; /* Adjusted for smaller font */
-        }
-        #social-footer a:hover { box-shadow: 0 0 15px #c0c0c0; }
-        .logo-x { color: #000; }
-        .logo-youtube { color: #f00; }
-        .logo-soundcloud { color: #f50; }
-        .logo-bandcamp { color: #00f; }
         @media (max-width: 767px) {
             body {
                 padding: 10px;
@@ -123,15 +93,6 @@
             }
             .merch-item {
                 max-width: 100%;
-            }
-            #social-footer {
-                gap: 10px;
-                padding: 5px 0;
-            }
-            #social-footer a {
-                width: 40px;
-                height: 40px;
-                font-size: 22px; /* Scaled for mobile */
             }
         }
     </style>
@@ -156,11 +117,5 @@
             <p>No movie deal, but you can enjoy the origin story of Chrometor in your imagination with the help of a 40"x26" poster.</p>
         </div>
     </section>
-    <div id="social-footer">
-        <a href="https://x.com/Chr0metor" target="_blank" class="logo-x">X</a>
-        <a href="https://www.youtube.com/@chrometor" target="_blank" class="logo-youtube">Y</a>
-        <a href="https://soundcloud.com/chrometor" target="_blank" class="logo-soundcloud">S</a>
-        <a href="https://chrometor.bandcamp.com/" target="_blank" class="logo-bandcamp">B</a>
-    </div>
 </body>
 </html>

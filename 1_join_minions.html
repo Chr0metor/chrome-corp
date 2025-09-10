@@ -20,7 +20,7 @@
             max-width: 1080px;
             margin: 0 auto;
             position: relative;
-            padding-bottom: 150px; /* Increased for extra spacing to prevent footer from blocking content */
+            padding-bottom: 50px; /* Reduced since footer removed, but kept minimal for layout harmony */
         }
         #logo-overlay {
             display: block;
@@ -107,36 +107,6 @@
             text-align: center;
             border-radius: 0 0 5px 5px; /* Clipped to bottom */
         }
-        #social-footer {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            padding: 10px 0; /* Inner padding for breathing room */
-        }
-        #social-footer a {
-            text-decoration: none;
-            background: #333;
-            padding: 10px;
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: box-shadow 0.3s;
-            font-size: 30px;
-            font-weight: bold;
-            width: 50px;
-            height: 50px;
-        }
-        #social-footer a:hover { box-shadow: 0 0 15px #c0c0c0; }
-        .logo-x { color: #000; }
-        .logo-youtube { color: #f00; }
-        .logo-soundcloud { color: #f50; }
-        .logo-bandcamp { color: #00f; }
         @media (max-width: 767px) {
             body {
                 padding: 10px;
@@ -172,15 +142,6 @@
                 width: 100%;
                 font-size: 24px;
                 padding: 8px;
-            }
-            #social-footer {
-                gap: 10px;
-                padding: 5px 0;
-            }
-            #social-footer a {
-                width: 40px;
-                height: 40px;
-                font-size: 22px;
             }
         }
     </style>
@@ -225,12 +186,6 @@
     <div id="great-benefits">
         <img src="adverts/minion.JPG" alt="Chrome Corp Minion Benefits Image">
         <div class="overlay">Great Benefits!</div>
-    </div>
-    <div id="social-footer">
-        <a href="https://x.com/Chr0metor" target="_blank" class="logo-x">X</a>
-        <a href="https://www.youtube.com/@chrometor" target="_blank" class="logo-youtube">Y</a>
-        <a href="https://soundcloud.com/chrometor" target="_blank" class="logo-soundcloud">S</a>
-        <a href="https://chrometor.bandcamp.com/" target="_blank" class="logo-bandcamp">B</a>
     </div>
     <script>
         document.getElementById('minion_type').addEventListener('change', function() {
