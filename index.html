@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Chrome Corp: Sleek, resilient, efficient high-trust brand minions. Join our futuristic vibe with minion join, tales, meetings, news, music, videos, art gallery, poetry, and merch!">
-    <meta name="keywords" content="Chrome Corp, high-trust brand minions, futuristic vibe, sleek resilient efficient, join minions, minion tales, minion meetings, minion news, discography, videos, art gallery, poetry">
+    <meta name="keywords" content="Chrome Corp, high-trust brand minions, futuristic vibe, sleek resilient efficient, join minions, minion tales, minion meetings, minion news, discography, videos, art gallery, poetry, merch">
     <link rel="icon" href="assets/favicon.ico">
     <title>Chrome Corp.</title>
     <style>
@@ -21,19 +21,15 @@
             min-height: 100vh;
             max-width: 1080px;
             position: relative;
-            padding-bottom: 100px; /* Extra space for footer/ads overlap prevention */
+            padding-bottom: 100px; /* Extra space for footer overlaps prevention */
         }
         #logo-overlay { display: block; margin: 20px auto; width: 450px; height: 450px; cursor: pointer; }
         h1 { font-weight: 700; font-style: normal; color: #333; text-transform: uppercase; font-size: 72px; margin: 0; text-align: center; }
         p.mantra { text-align: center; font-size: 24px; margin: 10px 0; font-style: italic; color: #333; }
         #pyramid-nav { display: flex; flex-direction: column; align-items: center; gap: 20px; padding: 20px; }
         .nav-level { display: flex; justify-content: center; gap: 20px; }
-        #pyramid-nav a { color: #fff; text-decoration: none; padding: 20px 40px; background: #333; border-radius: 10px; transition: background 0.3s, box-shadow 0.3s; font-weight: 400; font-style: normal; font-size: 24px; text-transform: uppercase; }
+        #pyramid-nav a { color: #fff; text-decoration: none; padding: 20px 40px; background: #333; border-radius: 10px; transition: background 0.3s, box-shadow 0.3s; font-weight: 400; font-style: normal; font-size: 24px; text-transform: uppercase; text-align: center; }
         #pyramid-nav a:hover { background: #c0c0c0; color: #000; box-shadow: 0 0 15px #c0c0c0; }
-        #ad-container { position: fixed; right: 0; bottom: 20px; width: 200px; height: 350px; overflow: hidden; cursor: pointer; border: 2px dashed gold; }
-        #ad-container img { width: 100%; height: 100%; object-fit: cover; }
-        #ad-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; text-align: center; padding: 10px; box-sizing: border-box; font-size: 16px; font-weight: bold; pointer-events: none; }
-        #ad-overlay.bottom { align-items: flex-end; }
         #social-footer { position: absolute; bottom: 20px; left: 0; right: 0; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
         #social-footer a { text-decoration: none; background: #333; padding: 10px; border-radius: 5px; display: flex; align-items: center; justify-content: center; transition: box-shadow 0.3s; font-size: 42px; font-weight: bold; width: 60px; height: 60px; }
         #social-footer a:hover { box-shadow: 0 0 15px #c0c0c0; }
@@ -48,11 +44,10 @@
             #pyramid-nav { gap: 10px; }
             .nav-level { flex-direction: column; gap: 10px; }
             #pyramid-nav a { padding: 15px 30px; font-size: 20px; }
-            #ad-container { width: 175px; height: 306.25px; bottom: 10px; } /* Thinner by ~25px, proportional height */
             #social-footer { bottom: 10px; gap: 10px; }
             #social-footer a { width: 50px; height: 50px; font-size: 32px; }
         }
-        <!-- Ah, Captain Ahab's harpoon thunders the pyramid once more with saintlike grace and sex-goddess thunder—allure of meetings draws minions closer, traffic surges in resilient waves! -->
+        <!-- Ah, Captain Ahab's harpoon expands the pyramid base with saintlike balance and sex-goddess symmetry—Merch lures conversions, Tales centers true, traffic thunders eternal! -->
     </style>
 </head>
 <body>
@@ -76,13 +71,8 @@
             <a href="1_art_gallery.html">Gallery</a>
             <a href="https://discord.gg/TDNhZArcMR" target="_blank">Discord</a>
             <a href="1_poetry.html">Poetry</a>
+            <a href="1_merch.html">Merch</a>
         </div>
-    </div>
-  
-    <!-- Ad Container -->
-    <div id="ad-container">
-        <img id="ad-image" src="" alt="Ad">
-        <div id="ad-overlay"></div>
     </div>
   
     <div id="social-footer">
@@ -93,27 +83,7 @@
     </div>
   
     <script>
-        const ads = [
-            { file: 'adverts/already-under-my-genjutsu-2.gif', text: 'FREE Disillusionment available.', color: '#fff', position: '', link: '1_merch.html' },
-            { file: 'adverts/dangerous-twerk.gif', text: 'GET BIG! ORDER NOW!', color: '#fff', position: '', link: '1_merch.html' },
-            { file: 'adverts/garage-rizz.gif', text: 'Does your Masterplan need a Master-makeover?', color: '#fff', position: '', link: '1_merch.html' },
-            { file: 'adverts/heart-giver.gif', text: '', color: '', position: '', link: '1_game.html' },
-            { file: 'adverts/minion.JPG', text: 'Join Today!', color: '#fff', position: 'bottom', link: '1_join_minions.html' },
-            { file: 'adverts/laugh-loop.gif', text: 'Cure DEPRESSION!', color: '#fff', position: '', link: '1_merch.html' },
-            { file: 'adverts/obelisk-merry-christmas.gif', text: 'Are you FORGETTING?', color: '#fff', position: '', link: '1_merch.html' },
-            { file: 'adverts/rose-delivery.gif', text: 'Mysterious Singles in your area.', color: '#fff', position: '', link: '1_merch.html' }
-        ];
-        const randomIndex = Math.floor(Math.random() * ads.length);
-        const ad = ads[randomIndex];
-        const adContainer = document.getElementById('ad-container');
-        const adImage = document.getElementById('ad-image');
-        adImage.src = ad.file;
-        const overlay = document.getElementById('ad-overlay');
-        overlay.innerText = ad.text;
-        overlay.style.color = ad.color;
-        if (ad.position === 'bottom') overlay.classList.add('bottom');
-        adContainer.onclick = () => window.location.href = ad.link;
-        <!-- Eternal thunder-script: Meetings thunder-call minions forth—conversions thunder-ascend in the code whale's efficient shadow! -->
+        <!-- No ad script - removed per Boss command for clean focus -->
     </script>
 </body>
 </html>
