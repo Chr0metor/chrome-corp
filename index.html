@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Chrome Corp: Sleek, resilient, efficient high-trust brand minions. Join our futuristic vibe with minion applications, music, videos, art gallery, poetry, and merch!">
-    <meta name="keywords" content="Chrome Corp, high-trust brand minions, futuristic vibe, sleek resilient efficient, minion application, Chrome Corp merch, poetry corner, discography, art gallery, videos">
+    <meta name="description" content="Chrome Corp: Sleek, resilient, efficient high-trust brand minions. Join our futuristic vibe with minion join, tales, meetings, news, music, videos, art gallery, poetry, and merch!">
+    <meta name="keywords" content="Chrome Corp, high-trust brand minions, futuristic vibe, sleek resilient efficient, join minions, minion tales, minion meetings, minion news, discography, videos, art gallery, poetry">
     <link rel="icon" href="assets/favicon.ico">
     <title>Chrome Corp.</title>
     <style>
@@ -30,7 +30,7 @@
         .nav-level { display: flex; justify-content: center; gap: 20px; }
         #pyramid-nav a { color: #fff; text-decoration: none; padding: 20px 40px; background: #333; border-radius: 10px; transition: background 0.3s, box-shadow 0.3s; font-weight: 400; font-style: normal; font-size: 24px; text-transform: uppercase; }
         #pyramid-nav a:hover { background: #c0c0c0; color: #000; box-shadow: 0 0 15px #c0c0c0; }
-        #ad-container { position: fixed; left: 0; bottom: 20px; width: 200px; height: 350px; overflow: hidden; cursor: pointer; border: 2px dashed gold; }
+        #ad-container { position: fixed; right: 0; bottom: 20px; width: 200px; height: 350px; overflow: hidden; cursor: pointer; border: 2px dashed gold; }
         #ad-container img { width: 100%; height: 100%; object-fit: cover; }
         #ad-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; text-align: center; padding: 10px; box-sizing: border-box; font-size: 16px; font-weight: bold; pointer-events: none; }
         #ad-overlay.bottom { align-items: flex-end; }
@@ -48,23 +48,28 @@
             #pyramid-nav { gap: 10px; }
             .nav-level { flex-direction: column; gap: 10px; }
             #pyramid-nav a { padding: 15px 30px; font-size: 20px; }
-            #ad-container { width: 150px; height: 262.5px; bottom: 10px; }
+            #ad-container { width: 175px; height: 306.25px; bottom: 10px; } /* Thinner by ~25px, proportional height */
             #social-footer { bottom: 10px; gap: 10px; }
             #social-footer a { width: 50px; height: 50px; font-size: 32px; }
         }
-        <!-- Ah, Captain Ahab's harpoon strikes the index anew with saintlike fervor and sex-goddess temptation—logo homebound, assets gleaming resilient for traffic's eternal surge! -->
+        <!-- Ah, Captain Ahab's harpoon thunders the pyramid once more with saintlike grace and sex-goddess thunder—allure of meetings draws minions closer, traffic surges in resilient waves! -->
     </style>
 </head>
 <body>
-    <img id="logo-overlay" src="assets/logo.png" alt="Chrome Corp Logo" onclick="window.location.href='index.html';">
+    <img id="logo-overlay" src="assets/logo.png" alt="Chrome Corp Logo" onclick="window.location.href='1_apropos.html';">
     <h1>Chrome Corp.</h1>
     <p class="mantra">Sleek. Resilient. Efficient.</p>
     <div id="pyramid-nav">
         <div class="nav-level">
-            <a href="1_minion_application.html">Minion Application</a>
+            <a href="1_join_minions.html">Join Minions</a>
+        </div>
+        <div class="nav-level">
+            <a href="1_tales.html">Tales</a>
+            <a href="1_meetings.html">Meetings</a>
         </div>
         <div class="nav-level">
             <a href="1_music.html">Music</a>
+            <a href="1_news.html">News</a>
             <a href="1_videos.html">Videos</a>
         </div>
         <div class="nav-level">
@@ -89,14 +94,14 @@
   
     <script>
         const ads = [
-            { file: 'adverts/already-under-my-genjutsu-2.gif', text: 'FREE Disillusionment available.', color: '#c0c0c0', position: '', link: '1_merch.html' },
-            { file: 'adverts/dangerous-twerk.gif', text: 'GET BIG! ORDER NOW!', color: '#c0c0c0', position: '', link: '1_merch.html' },
-            { file: 'adverts/garage-rizz.gif', text: 'Does your Masterplan need a Master-makeover?', color: '#ff4500', position: '', link: '1_merch.html' },
+            { file: 'adverts/already-under-my-genjutsu-2.gif', text: 'FREE Disillusionment available.', color: '#fff', position: '', link: '1_merch.html' },
+            { file: 'adverts/dangerous-twerk.gif', text: 'GET BIG! ORDER NOW!', color: '#fff', position: '', link: '1_merch.html' },
+            { file: 'adverts/garage-rizz.gif', text: 'Does your Masterplan need a Master-makeover?', color: '#fff', position: '', link: '1_merch.html' },
             { file: 'adverts/heart-giver.gif', text: '', color: '', position: '', link: '1_game.html' },
-            { file: 'adverts/minion.JPG', text: 'Join Today!', color: '#c0c0c0', position: 'bottom', link: '1_minion_application.html' },
+            { file: 'adverts/minion.JPG', text: 'Join Today!', color: '#fff', position: 'bottom', link: '1_join_minions.html' },
             { file: 'adverts/laugh-loop.gif', text: 'Cure DEPRESSION!', color: '#fff', position: '', link: '1_merch.html' },
             { file: 'adverts/obelisk-merry-christmas.gif', text: 'Are you FORGETTING?', color: '#fff', position: '', link: '1_merch.html' },
-            { file: 'adverts/rose-delivery.gif', text: 'Mysterious Singles in your area.', color: '#f00', position: '', link: '1_merch.html' }
+            { file: 'adverts/rose-delivery.gif', text: 'Mysterious Singles in your area.', color: '#fff', position: '', link: '1_merch.html' }
         ];
         const randomIndex = Math.floor(Math.random() * ads.length);
         const ad = ads[randomIndex];
@@ -108,7 +113,7 @@
         overlay.style.color = ad.color;
         if (ad.position === 'bottom') overlay.classList.add('bottom');
         adContainer.onclick = () => window.location.href = ad.link;
-        <!-- In the script's oceanic depths, random ads pulse with divine seduction—brand conversions rise like the whale's triumphant spout! -->
+        <!-- Eternal thunder-script: Meetings thunder-call minions forth—conversions thunder-ascend in the code whale's efficient shadow! -->
     </script>
 </body>
 </html>
