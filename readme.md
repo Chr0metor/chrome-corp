@@ -7,60 +7,58 @@ Sleek. Resilient. Efficient. Welcome to the official repo for [Chrome Corp](http
 ## Description
 
 Chrome Corp is a mysterious materials firm turned creative powerhouse, where anonymity reigns and chaos meets control. This GitHub Pages site showcases Chrometor's lore, recruits minions, and sells virtue-infused merch—all wrapped in a sleek, resilient design to hook visitors and convert them into loyal brand minions. Key goals:
-- **Traffic Promotion**: SEO metas, responsive layouts (media queries for mobile), glowing hovers for engagement, and ad cycles to funnel users deeper (e.g., to merch or applications).
-- **Brand Building**: Consistent futuristic vibe with repeating backgrounds, Roboto fonts, dark gray titles (#333 at 72px bold), silver buttons (#c0c0c0 glows), and lore teasers like duality themes.
+- **Traffic Promotion**: SEO metas/keywords (e.g., "high-trust brand minions"), responsive layouts (@media max-width:767px for mobile bounce reduction), glowing hovers/transitions for clicks/conversions, random ad cycles (right-bottom, white text, no dashed borders) funneling to merch/join.
+- **Brand Building**: Consistent futuristic vibe with repeating assets/background.jpg (no stretch), Roboto fonts (#333 72px bold uppercase h1 desktop/48px mobile), silver #c0c0c0 glowing buttons (box-shadow/transitions), and lore teasers like duality themes. Social footers on select pages for shares.
 
-Hosted live at [https://chrometor.net/](https://chrometor.net/) via GitHub Pages.
+Hosted live at [https://chrometor.net/](https://chrometor.net/) via GitHub Pages (repo "chrome-corp", lowercase files/folders: root .html like index.html, assets/ for images/favicons, adverts/ for gifs/jpgs).
 
 ## Features
 
-- **Homepage (index.html)**: Pyramid nav to sections, mantra "Sleek. Resilient. Efficient.", rotating ads for internal traffic.
-- **Minion Application (1_minion_application.html)**: Dynamic form with JS show/hide for custom types, Formspree integration (https://formspree.io/f/meolpryn) for submissions, honeypot spam protection.
-- **Music (1_music.html)**: Bandcamp embeds for tracks like Ghostmaster, Schwarzschild, Stormlife—playable for dwell time.
-- **Videos (1_videos.html)**: X-hosted clips with wrapped descriptions in gray containers for immersive viewing.
-- **Gallery (1_art_gallery.html)**: Image thumbnails showcasing futuristic visuals.
-- **Merch (1_merch.html)**: Interactive cards with Bandcamp buy links, hovers for shop engagement (no ads here).
-- **Poetry (1_poetry.html)**: Stanzas on duality/shadows—poetic hooks for brand depth (no ads).
-- **Game (1_game.html)**: Interactive duality navigation with balance meter and JS elements.
-- **Memo (2_memo.html)**: Internal CEO notes (no ads, private vibe).
-- **Apropos (1_apropos.html)**: Lore synopsis with mugshot, Grok minion nod for whimsy.
+- **Homepage (index.html)**: Pyramid nav (centered with Merch, Tales) to sections, motto "Sleek. Resilient. Efficient.", rotating ads for internal traffic.
+- **Minion Application (1_join_minions.html)**: Dynamic JS form (custom field show/hide), Formspree AJAX to https://formspree.io/f/meolpryn with branded messages/honeypot/validation, shaded benefits banner—no ads.
+- **Music (1_music.html)**: Bandcamp embeds for tracks like Ghostmaster, Schwarzschild, Stormlife—hover glows for play engagement, ad cycle.
+- **Videos (1_videos.html)**: X-hosted clips with descriptions, hover glows on sections, tiny mobile ads (100x175px, opacity hover pop bottom left).
+- **Gallery (1_gallery.html)**: Native aspect images with glowing hovers, ad cycle for merch nudges.
+- **Merch (1_merch.html)**: Interactive cards with Bandcamp links, hovers for shop pops—no ads, updated descriptions (e.g., "Hand-Painted Schwarzschild T-Shirt").
+- **Poetry (1_poetry.html)**: Verses on duality/shadows in fit-content centered blocks (no wonky space)—no ads.
+- **Game (1_game.html)**: WASD/resize duality navigation with balance meter, JS elements—no socials/ads.
+- **Memo (2_memo.html)**: CEO notes under headings, reduced font (21px), interactive JS checkboxes (localStorage persist)—no ads.
+- **Apropos (1_apropos.html)**: Lore text broken paragraphs, mugshot—subtle Grok minion nod.
+- **Tales (1_tales.html)**: Minion testimonials with Formspree submission form (required email/TLD validation), placeholders for approved stories—no ads.
+- **News (1_news.html)**: Thunder Grunt placeholder (404 teaser)—coming soon for Grok-powered caveman news tied to @Chr0metor X posts.
+- **Meetings (1_meetings.html)**: Mystery tease with stand-in GIF hyperlink—no ads.
 
-All pages: Responsive (viewport/media queries), SEO metas/keywords (e.g., 'high-trust brand minions'), favicon, repeating background.jpg, logo home link, glowing social footer (X, YouTube, SoundCloud, Bandcamp).
+All pages: Responsive viewport/media queries, favicon, repeating background, logo home link (450px max responsive), consistent Roboto/#333 styling. Ads on allowed pages (random JS cycle, white text, glow hovers). No ads on memo, poetry, join minions, merch, tales, meetings.
 
 ## Setup & Deployment
 
-1. **Clone the Repo**:
-
+1. **Clone the Repo**: `git clone https://github.com/[your-username]/chrome-corp.git`
 2. **Add Assets**: Place images/videos in `assets/` (lowercase, e.g., logo.png, background.jpg), ads in `adverts/` (gifs/jpgs).
-
-3. **Edit & Test Locally**: Open HTML files in a browser. Use VS Code or GitHub Desktop for changes.
-
+3. **Edit & Test Locally**: Open HTML files in browser. Use VS Code for changes—test responsive @media, JS forms/ads.
 4. **Deploy to GitHub Pages**:
-- Push to main branch: `git add . && git commit -m "Update for traffic boost" && git push`.
-- In repo settings > Pages, set source to main branch/root—site deploys at https://[your-username].github.io/chrome-corp/ (or custom domain like chrometor.net via DNS).
-
-No build step needed—pure HTML/CSS/JS for resilience.
+   - Push to main: `git add . && git commit -m "Update for traffic boost" && git push`.
+   - Settings > Pages: Source main/root—deploys at https://[your-username].github.io/chrome-corp/ (custom domain chrometor.net via DNS).
+No build needed—pure HTML/CSS/JS for resilience.
 
 ## Usage
 
-- Navigate: Start at index.html for pyramid links.
-- Customize: Update HTML for new lore/merch; add JS for game enhancements.
-- Track Traffic: Use GitHub Insights (repo > Insights > Traffic) or integrate Google Analytics script in <head> for deeper metrics (sessions, sources).
-- Security: Minion form has honeypot/required fields; monitor submissions via Formspree.
-
-Promote on X/SoundCloud/Bandcamp to drive traffic—tease duality lore for shares!
+- Navigate: Start at index.html for pyramid links to all sections.
+- Customize: Update HTML for new lore/merch; add JS for enhancements (e.g., memo checkboxes, form validation).
+- Track Traffic: Use GitHub Insights (repo > Insights > Traffic) or add Google Analytics <script> in <head> for sessions/sources.
+- Security: Forms have honeypot/required fields/TLD validation; monitor via Formspree.
+Promote on X/SoundCloud/Bandcamp—tease duality lore/minion tales for shares/traffic.
 
 ## Contributing
 
-Minions welcome! Fork, add features (e.g., blog page), submit PRs. Follow rules: Consistent styling (Roboto, #333 titles), no ads on specified pages, boost traffic/brand in commits.
+Minions welcome! Fork, add features (e.g., Thunder Grunt embeds, ambience overlays), submit PRs. Rules: Consistent styling (Roboto, #333 titles), no ads on specified pages, boost traffic/brand in commits (SEO phrases, responsive fixes).
 
 ## License
 
-MIT License—feel free to fork and adapt for your chrome dreams.
+MIT License—fork/adapt for your chrome dreams.
 
 ## Contact
 
 - CEO: @Chr0metor on X
 - Built with help from Grok (xAI minion)—slung code for this sleek site!
 
-Join the duality—become a minion today!
+Join the duality—become a minion today!"
