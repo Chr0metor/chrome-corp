@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Chrome Corp Merch: Shop futuristic high-trust brand minions gear like Schwarzschild T-Shirts, Patches, and Posters. Sleek, resilient, efficient vibes for your edgy poetic soul!">
-    <meta name="keywords" content="Chrome Corp merch, high-trust brand minions, futuristic vibe, sleek resilient efficient, Schwarzschild T-Shirt, Chrome Corp Patch, Movie-Sized Poster, Chrometor">
+    <meta name="description" content="Chrome Corp Merch: Shop futuristic high-trust brand minions gear — Schwarzschild T-Shirts, Patches, Posters, and the new Black Rose poetry & visuals collection. Sleek, resilient, efficient vibes for your edgy poetic soul!">
+    <meta name="keywords" content="Chrome Corp merch, high-trust brand minions, futuristic vibe, sleek resilient efficient, Schwarzschild T-Shirt, Chrome Corp Patch, Movie-Sized Poster, Black Rose poetry book, Chrometor art">
     <link rel="icon" href="assets/favicon.ico">
     <title>Merch - Chrome Corp</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
@@ -20,7 +20,7 @@
             max-width: 1080px;
             margin: 0 auto;
             position: relative;
-            padding-bottom: 50px; /* Reduced since footer removed */
+            padding-bottom: 50px;
             font-weight: 300;
             font-style: italic;
         }
@@ -74,26 +74,11 @@
             margin: 0;
         }
         @media (max-width: 767px) {
-            body {
-                padding: 10px;
-                max-width: 100%;
-            }
-            #logo-overlay {
-                width: 100%;
-                height: auto;
-                max-height: none;
-            }
-            h1 {
-                font-size: 48px;
-            }
-            #merch-grid {
-                flex-direction: column;
-                align-items: center;
-                gap: 30px;
-            }
-            .merch-item {
-                max-width: 100%;
-            }
+            body { padding: 10px; max-width: 100%; }
+            #logo-overlay { width: 100%; height: auto; max-height: none; }
+            h1 { font-size: 48px; }
+            #merch-grid { flex-direction: column; align-items: center; gap: 30px; }
+            .merch-item { max-width: 100%; }
         }
     </style>
 </head>
@@ -102,19 +87,36 @@
     <h1>Merch</h1>
     <section id="merch-grid">
         <div class="merch-item">
-            <a href="https://chrometor.bandcamp.com/merch/schwarzschild-t-shirt" target="_blank"><img src="assets/merch/schwarzschild-tee.jpg" alt="Hand-painted Schwarzschild Tee"></a>
+            <a href="https://chrometor.bandcamp.com/merch/schwarzschild-t-shirt" target="_blank">
+                <img src="assets/merch/schwarzschild-tee.jpg" alt="Hand-painted Schwarzschild Tee">
+            </a>
             <h3>Hand-Painted Schwarzschild T-Shirt</h3>
-            <p>Show everyone the edgy, poetic soul underneath with this classic T-shirt.</p>
+            <p>Show everyone the edgy, poetic soul underneath.</p>
         </div>
+
         <div class="merch-item">
-            <a href="https://chrometor.bandcamp.com/merch/chrome-corp-patch" target="_blank"><img src="assets/merch/chrome-corp-patch.png" alt="Chrome Corp. Iron-on Patch (Pre-order)"></a>
+            <a href="https://chrometor.bandcamp.com/merch/chrome-corp-patch" target="_blank">
+                <img src="assets/merch/chrome-corp-patch.png" alt="Chrome Corp Iron-on Patch">
+            </a>
             <h3>Chrome Corp Patch</h3>
-            <p>A shiny badge which makes you apart of the team of minions working for Chrometor.</p>
+            <p>A shiny badge that makes you part of the minion team.</p>
         </div>
+
         <div class="merch-item">
-            <a href="https://chrometor.bandcamp.com/merch/chrome-corp-poster" target="_blank"><img src="assets/merch/chrome-corp-poster.jpg" alt="Chrome Corp Poster"></a>
+            <a href="https://chrometor.bandcamp.com/merch/chrome-corp-poster" target="_blank">
+                <img src="assets/merch/chrome-corp-poster.jpg" alt="Chrome Corp Movie-Sized Poster">
+            </a>
             <h3>Chrome Corp Movie-Sized Poster</h3>
-            <p>No movie deal, but you can enjoy the origin story of Chrometor in your imagination with the help of a 40"x26" poster.</p>
+            <p>40"x26" origin story poster — no movie deal required.</p>
+        </div>
+
+        <!-- FIXED: correct filename + cache buster -->
+        <div class="merch-item">
+            <a href="https://chrometor.gumroad.com/l/black_rose" target="_blank">
+                <img src="assets/merch/black-rose-thumbnail.jpg?v=1" alt="Black Rose – A small collection of Poems and Visuals by Chrometor">
+            </a>
+            <h3>Black Rose – Poetry & Visuals</h3>
+            <p>Limited digital + physical edition of dark, sleek, resilient poetry paired with haunting visuals.</p>
         </div>
     </section>
 </body>
